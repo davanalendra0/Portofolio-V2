@@ -5,6 +5,7 @@ const items = document.querySelectorAll(".lang-item");
 
 btn.addEventListener("click", () => {
     dropdown.classList.toggle("show");
+    btn.classList.toggle("active");
 });
 
 items.forEach(item => {
@@ -17,6 +18,7 @@ items.forEach(item => {
         item.classList.add("active");
 
         dropdown.classList.remove("show");
+        btn.classList.remove("active");
 
         localStorage.setItem("lang", lang);
     });
