@@ -34,3 +34,34 @@ const saved = localStorage.getItem("lang");
 if(saved){
     currentLang.textContent = saved.toUpperCase();
 }
+
+document.querySelectorAll(".ripple-btn").forEach(button => {
+
+    const ripple = button.querySelector(".ripple");
+
+    function moveRipple(e) {
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height) * 2;
+
+        ripple.style.width = size + "px";
+        ripple.style.height = size + "px";
+
+        ripple.style.left = e.clientX - rect.left - size/2 + "px";
+        ripple.style.top = e.clientY - rect.top - size/2 + "px";
+    }
+
+    button.addEventListener("mouseenter", (e) => {
+        moveRipple(e);
+        ripple.classList.remove("leave");
+        ripple.classList.add("enter");
+    });
+
+    button.addEventListener("mousemove", moveRipple);
+
+    button.addEventListener("mouseleave", (e) => {
+        moveRipple(e);
+        ripple.classList.remove("enter");
+        ripple.classList.add("leave");
+    });
+
+});
