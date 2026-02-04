@@ -23,7 +23,7 @@ body {
     padding: 0 60px;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    z-index: 999;
+    z-index: 2000;
     position: relative;
 }
 
@@ -250,6 +250,89 @@ body {
     }
 }
 
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    transform: none;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    transform-origin: center;
+    transition: 0.35s cubic-bezier(.4,0,.2,1), opacity 0.25s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg) translateX(0);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg) translateX(0);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    background: rgba(10,10,12,0.95);
+    backdrop-filter: blur(18px);
+    display: flex;
+    flex-direction: column;
+    padding: 120px 40px;
+    gap: 32px;
+    transition: right 0.45s cubic-bezier(.4,0,.2,1);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.mobile-menu.show {
+    right: 0;
+    pointer-events: auto;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.mobile-menu.show a {
+    animation: slideIn 0.5s forwards;
+}
+
+.mobile-menu.show a:nth-child(1) { animation-delay: 0.05s; }
+.mobile-menu.show a:nth-child(2) { animation-delay: 0.1s; }
+.mobile-menu.show a:nth-child(3) { animation-delay: 0.15s; }
+.mobile-menu.show a:nth-child(4) { animation-delay: 0.2s; }
+.mobile-menu.show a:nth-child(5) { animation-delay: 0.25s; }
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @media (max-width: 800px) {
     .header-right > .lang,
     .header-right > .my-video-btn {
@@ -257,6 +340,7 @@ body {
     }
 
     .header-center {
+        display: none;
         position: fixed;
         top: 90px;
         left: 0;
@@ -277,5 +361,10 @@ body {
 
     .nav {
         flex-direction: column;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: 12px;
     }
 }

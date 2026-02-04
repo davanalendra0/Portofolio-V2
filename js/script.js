@@ -63,5 +63,20 @@ document.querySelectorAll(".ripple-btn").forEach(button => {
         ripple.classList.remove("enter");
         ripple.classList.add("leave");
     });
+});
 
+const hamburger = document.getElementById("hamburgerBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mobileMenu.classList.toggle("show");
+    navMenu.classList.toggle("show");
+});
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        mobileMenu.classList.remove("show");
+    });
 });
