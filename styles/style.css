@@ -1,3 +1,16 @@
+:root {
+    --bg-dark: #0B0B12;
+    --bg-indigo: #1A1A2E;
+    --bg-soft: #2A2A40;
+    --neon: #A855F7;
+    --bg-dark-rgb: 11, 11, 18;
+    --bg-indigo-rgb: 26, 26, 46;
+    --bg-soft-rgb: 42, 42, 64;
+    --neon-rgb: 168, 85, 247;
+    --bg-gray-rgba: rgba(255,255,255,0.15);
+    --bg-dgray-rgba: rgba(255,255,255,0.06);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +20,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #0B0B12;
+    background-color: var(--bg-dark);
 }
 
 .header {
@@ -15,14 +28,14 @@ body {
     top: 0;
     width: 100%;
     height: 90px;
-    background: #1A1A2E;
+    background: var(--bg-indigo);
     backdrop-filter: blur(12px);
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     padding: 0 60px;
     box-sizing: border-box;
-    border-bottom: 1px solid rgba(42, 42, 64, 1);
+    border-bottom: 1px solid var(--bg-indigo-rgb);
     z-index: 2000;
     position: relative;
 }
@@ -54,7 +67,7 @@ body {
 .nav a {
     position: relative;
     text-decoration: none;
-    color: rgb(201, 194, 194);;
+    color: whitesmoke;
     font-size: 18px;
     font-weight: 500;
     opacity: 0.8;
@@ -113,7 +126,7 @@ body {
 }
 
 .lang-btn:hover {
-    background: rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.15);
 }
 
 .arrow {
@@ -136,7 +149,7 @@ body {
     background: rgba(20,20,20,0.95);
     backdrop-filter: blur(14px);
     border-radius: 18px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.06);
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -164,11 +177,11 @@ body {
 }
 
 .lang-item:hover {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.06);
 }
 
 .lang-item.active {
-    background: rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.15);
 }
 
 .my-video {
@@ -178,7 +191,7 @@ body {
     font-weight: 500;
     padding: 8px 18px;
     border-radius: 24px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.06);
     transition: 0.25s ease;
 }
 
@@ -199,7 +212,7 @@ body {
     font-size: 15px;
     font-weight: 500;
     color: white;
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.15);
     backdrop-filter: blur(10px);
     transition:
@@ -212,7 +225,7 @@ body {
 .ripple {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.15);
     width: 20px;
     height: 20px;
     transform: scale(0);
@@ -353,7 +366,7 @@ body {
     left: -20px;
     right: -40px;
     height: 1px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .video-link:hover {
