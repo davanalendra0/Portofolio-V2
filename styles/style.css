@@ -309,6 +309,11 @@ body {
     transition: right 0.45s cubic-bezier(.4,0,.2,1);
     z-index: 1000;
     pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    padding: 120px 40px 40px 40px; 
+    gap: 32px;
+    box-sizing: border-box;
 }
 
 .mobile-menu.show {
@@ -323,6 +328,40 @@ body {
     opacity: 0;
     transform: translateX(30px);
 }
+
+.video-link {
+    margin-top: auto;
+    background: transparent;
+    padding: 5px 0px;
+    position: relative;
+    display: block;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.video-link::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -20px;
+    right: -40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.video-link:hover {
+    background: #1A1A2E;
+    color: white;
+    transform: none;
+}
+
 
 .mobile-menu a:hover {
     color: #A855F7;
