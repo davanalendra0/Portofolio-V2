@@ -114,9 +114,9 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255,255,255,0.06);
+    background: var(--bg-dgray-rgba);
     color: white;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid var(--bg-gray-rgba);
     padding: 8px 16px;
     border-radius: 28px;
     cursor: pointer;
@@ -126,7 +126,7 @@ body {
 }
 
 .lang-btn:hover {
-    background: rgba(255,255,255,0.15);
+    background: var(--bg-gray-rgba);
 }
 
 .arrow {
@@ -146,10 +146,10 @@ body {
     right: 0;
     width: 260px;
     padding: 10px;
-    background: rgba(20,20,20,0.95);
+    background: var(--bg-dark);
     backdrop-filter: blur(14px);
     border-radius: 18px;
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid var(--bg-gray-rgba);
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -177,11 +177,11 @@ body {
 }
 
 .lang-item:hover {
-    background: rgba(255,255,255,0.06);
+    background: var(--bg-dgray-rgba);
 }
 
 .lang-item.active {
-    background: rgba(255,255,255,0.15);
+    background: var(--bg-gray-rgba);
 }
 
 .my-video {
@@ -191,7 +191,7 @@ body {
     font-weight: 500;
     padding: 8px 18px;
     border-radius: 24px;
-    background: rgba(255,255,255,0.06);
+    background: var(--bg-dgray-rgba);
     transition: 0.25s ease;
 }
 
@@ -212,8 +212,8 @@ body {
     font-size: 15px;
     font-weight: 500;
     color: white;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.15);
+    background: var(--bg-dgray-rgba);
+    border: 1px solid var(--bg-gray-rgba);
     backdrop-filter: blur(10px);
     transition:
     background 0.6s ease,
@@ -225,7 +225,7 @@ body {
 .ripple {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255,255,255,0.15);
+    background: var(--bg-gray-rgba);
     width: 20px;
     height: 20px;
     transform: scale(0);
@@ -313,7 +313,7 @@ body {
     right: -100%;
     width: 260px;
     height: 100vh;
-    background: rgba(10,10,12,0.95);
+    background: var(--bg-dgray-rgba);
     backdrop-filter: blur(18px);
     display: flex;
     flex-direction: column;
@@ -350,7 +350,7 @@ body {
     display: block;
     width: calc(100% + 40px);
     margin-left: -20px;
-    background: rgba(255,255,255,0.08);
+    background: var(--bg-dgray-rgba);
     color: white;
     text-align: center;
     text-decoration: none;
@@ -366,18 +366,18 @@ body {
     left: -20px;
     right: -40px;
     height: 1px;
-    background: rgba(255, 255, 255, 0.06);
+    background: var(--bg-dgray-rgba);
 }
 
 .video-link:hover {
-    background: #1A1A2E;
+    background: var(--bg-indigo);
     color: white;
     transform: none;
 }
 
 
 .mobile-menu a:hover {
-    color: #A855F7;
+    color: var(--neon);
 }
 
 .mobile-menu.show a {
@@ -398,7 +398,6 @@ body {
 }
 
 @media (max-width: 800px) {
-    .header-right > .lang,
     .header-right > .my-video-btn {
         display: none;
     }
@@ -409,7 +408,7 @@ body {
         top: 90px;
         left: 0;
         width: 100%;
-        background: rgba(10,10,10,0.96);
+        background: var(--bg-dark);
         backdrop-filter: blur(14px);
         flex-direction: column;
         align-items: center;
