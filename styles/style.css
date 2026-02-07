@@ -432,34 +432,45 @@ body {
     }
 }
 
-
 .hero {
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    padding: 0 8%;
+    align-items: flex-start;
+    padding: 0 5%;
+    padding-top: 90px;
 }
 
 .hero-text {
-    font-family: "Inter", sans-serif;
     color: white;
     max-width: 700px;
+    cursor: default;
 }
 
 .hero h1 {
+    font-family: monospace;
     font-size: 64px;
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -1px;
 }
 
+.hero h1 span {
+    display: block;
+}
+
 .name {
     color: white;
 }
 
+.encrypt {
+    letter-spacing: 3px;
+}
+
 .desc {
+    font-family: "Inter", sans-serif;
     margin-top: 24px;
     font-size: 18px;
     color: #737373;
     line-height: 1.7;
+    text-align: justify;
 }

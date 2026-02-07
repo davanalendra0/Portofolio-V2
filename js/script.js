@@ -80,3 +80,32 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
         mobileMenu.classList.remove("show");
     });
 });
+
+const chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?/\\~";
+
+document.querySelectorAll(".encrypt").forEach(el => {
+    const original = el.textContent;
+    let iteration = 0;
+
+    const interval = setInterval(() => {
+        el.textContent = original
+            .split("")
+            .map((char, index) => {
+                if (char === " ") return " ";
+
+                if (index < iteration) {
+                    return original[index];
+                }
+
+                return chars[Math.floor(Math.random() * chars.length)];
+            })
+            .join("");
+
+        if (iteration >= original.length) {
+            clearInterval(interval);
+        }
+
+        iteration += 0.25;
+    }, 30);
+});
