@@ -474,3 +474,59 @@ body {
     line-height: 1.7;
     text-align: justify;
 }
+
+.info-cards {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-dgray-rgba);
+    border: 1px solid var(--bg-gray-rgba);
+    backdrop-filter: blur(6px);
+    padding: 16px 22px;
+    border-radius: 11px;
+    min-width: 180px;
+    transition: 0.25s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        150px circle at var(--x, 50%) var(--y, 50%),
+        rgba(255,255,255,0.18),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.label {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a1a1aa;
+    margin-bottom: 6px;
+}
+
+.card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
