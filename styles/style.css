@@ -431,3 +431,35 @@ body {
         margin-left: 12px;
     }
 }
+
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.hero-text {
+    font-family: "Inter", sans-serif;
+    color: white;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.name {
+    color: white;
+}
+
+.desc {
+    margin-top: 24px;
+    font-size: 18px;
+    color: #737373;
+    line-height: 1.7;
+}
