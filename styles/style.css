@@ -534,7 +534,7 @@ body {
 .cta-buttons {
     display: flex;
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 20px;
     flex-wrap: wrap;
 }
 
@@ -542,7 +542,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 3px 20px;
+    padding: 0px 18px;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
@@ -605,3 +605,60 @@ body {
     color: white;
     backdrop-filter: blur(8px);
 }
+
+.btn-cv-hover {
+    padding: 6px 22px 6px 12px !important;
+    position: relative;
+    overflow: hidden;
+    gap: 12px !important;
+}
+
+.icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow-icon {
+    position: absolute;
+    font-size: 14px;
+    opacity: 0;
+    transform: translate(-10px, 10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: black;
+    line-height: 1;
+}
+
+.btn-cv-hover:hover {
+    background: rgba(255, 255, 255, 1) !important;
+    color: black !important;
+}
+
+.btn-cv-hover:hover .icon-wrapper {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-cv-hover:hover .dot {
+    width: 28px;
+    height: 28px;
+    background-color: #ffffff;
+}
+
+.btn-cv-hover:hover .arrow-icon {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
