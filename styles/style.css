@@ -576,7 +576,7 @@ body {
     left: -8px;
     right: -8px;
     border-radius: 14px;
-    border: 2px solid rgba(168,85,247,0.9);
+    border: 2px solid var(--bg-soft);
     opacity: 0;
     transition: 0.3s ease;
     pointer-events: none;
@@ -584,7 +584,7 @@ body {
 
 .shine-btn:hover::after {
     opacity: 1;
-    box-shadow: 0 0 10px rgba(168,85,247,0.6);
+    box-shadow: 0 0 10px var(--bg-indigo);
 }
 
 .btn-inner {
@@ -660,5 +660,40 @@ body {
 .btn-cv-hover:hover .arrow-icon {
     opacity: 1;
     transform: translate(0, 0);
+}
+
+.social-links-container {
+    display: flex;
+    gap: 27px;
+    margin-top: 30px;
+}
+
+.social-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.social-img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    filter: brightness(0) invert(1); 
+}
+
+.social-icon-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.social-icon-link:hover .social-img {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
