@@ -23,6 +23,13 @@ body {
     background-color: var(--bg-dark);
 }
 
+.bg-grid {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -221,6 +228,12 @@ body {
     box-shadow 0.45s ease,
     color 0.45s ease;
 }
+
+.my-video-btn .label {
+    position: relative;
+    top: 3px;
+}
+
 
 .ripple {
     position: absolute;
