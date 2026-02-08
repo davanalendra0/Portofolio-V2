@@ -437,7 +437,7 @@ body {
     display: flex;
     align-items: flex-start;
     padding: 0 5%;
-    padding-top: 90px;
+    padding-top: 50px;
 }
 
 .hero-text {
@@ -448,7 +448,7 @@ body {
 
 .hero h1 {
     font-family: monospace;
-    font-size: 64px;
+    font-size: 45px;
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -1px;
@@ -477,8 +477,8 @@ body {
 
 .info-cards {
     display: flex;
-    gap: 16px;
-    margin-top: 32px;
+    gap: 15px;
+    margin-top: 33px;
     flex-wrap: wrap;
 }
 
@@ -488,7 +488,7 @@ body {
     background: var(--bg-dgray-rgba);
     border: 1px solid var(--bg-gray-rgba);
     backdrop-filter: blur(6px);
-    padding: 16px 22px;
+    padding: 10px 15px;
     border-radius: 11px;
     min-width: 180px;
     transition: 0.25s ease;
@@ -499,7 +499,7 @@ body {
     position: absolute;
     inset: 0;
     background: radial-gradient(
-        150px circle at var(--x, 50%) var(--y, 50%),
+        100px circle at var(--x, 50%) var(--y, 50%),
         rgba(255,255,255,0.18),
         transparent 60%
     );
@@ -529,4 +529,79 @@ body {
     font-size: 16px;
     font-weight: 600;
     color: white;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border-radius: 10px;
+}
+
+.btn.primary {
+    background: white;
+    color: black;
+}
+
+.shine-btn {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+    z-index: 1;
+    transition: 0.25s ease;
+}
+
+.shine-btn:hover {
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.35); 
+}
+
+.shine-btn::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;
+    border-radius: 14px;
+    border: 2px solid rgba(168,85,247,0.9);
+    opacity: 0;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.shine-btn:hover::after {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(168,85,247,0.6);
+}
+
+.btn-inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    display: inline-block;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background: white;
+    color: black;
+}
+
+.btn.outline {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+    backdrop-filter: blur(8px);
 }
