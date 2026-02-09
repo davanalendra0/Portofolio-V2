@@ -512,21 +512,24 @@ body {
     transition: 0.25s ease;
 }
 
-.card::before {
+.hover-glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-glow::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(
-        100px circle at var(--x, 50%) var(--y, 50%),
-        rgba(255,255,255,0.18),
-        transparent 60%
-    );
+    background: radial-gradient(250px circle at var(--x, 50%) var(--y, 50%),
+    rgba(255,255,255,0.18), transparent 60%);
     opacity: 0;
     transition: opacity 0.25s ease;
     pointer-events: none;
+    filter: blur(24px);
 }
 
-.card:hover::before {
+.hover-glow:hover::before {
     opacity: 1;
 }
 
@@ -749,6 +752,40 @@ body {
     object-fit: cover;
     border-radius: 50%;
     mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+.follow-name {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(35, 35, 50, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--bg-gray-rgba);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(.85);
+    transition: opacity .25s ease, transform .25s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,.45), 0 0 20px rgba(168,85,247,.15);
+    white-space: nowrap;
+}
+
+.follow-name.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.mini-avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .status-badge {

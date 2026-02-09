@@ -110,7 +110,7 @@ document.querySelectorAll(".encrypt").forEach(el => {
     }, 30);
 });
 
-const cards = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".hover-glow");
 
 cards.forEach(card => {
     card.addEventListener("mousemove", (e) => {
@@ -122,4 +122,32 @@ cards.forEach(card => {
         card.style.setProperty("--x", `${x}px`);
         card.style.setProperty("--y", `${y}px`);
     });
+});
+
+const circle = document.querySelector(".profile-circle");
+const follow = document.querySelector(".follow-name");
+
+circle.addEventListener("mouseenter", () => {
+    follow.classList.add("show");
+    follow.style.opacity = "1";
+    follow.style.transform = "translate(-50%, -50%) scale(1)";
+});
+
+circle.addEventListener("mouseleave", () => {
+    follow.classList.remove("show");
+    follow.style.opacity = "0";
+    follow.style.transform = "translate(-50%, -50%) scale(0.8)";
+});
+
+circle.addEventListener("mousemove", (e) => {
+    const rect = circle.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const offsetX = 60;
+    const offsetY = 65;
+
+    follow.style.left = x + offsetX + "px";
+    follow.style.top = y + offsetY + "px";
 });
