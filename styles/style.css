@@ -850,7 +850,7 @@ body {
 
 .about {
     color: white;
-    padding: 200px 5%;
+    padding: 120px;
 }
 
 .about-container {
@@ -967,7 +967,7 @@ body {
 }
 
 .tech-stack {
-    padding: 225px 0;
+    padding: 200px 0;
 }
 
 .tech-stack .container {
