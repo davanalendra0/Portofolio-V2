@@ -24,27 +24,26 @@ body {
 }
 
 .bg-grid {
+    background-size: 50px 50px;
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-    background-size: 50px 50px;
 }
 
 .header {
     position: sticky;
-    top: 0;
-    width: 100%;
-    height: 90px;
-    background: var(--bg-indigo);
-    backdrop-filter: blur(12px);
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
+    top: 0;
+    width: 100%;
+    height: 90px;
     padding: 0 60px;
+    background: var(--bg-indigo);
+    backdrop-filter: blur(12px);
     box-sizing: border-box;
     border-bottom: 1px solid var(--bg-indigo-rgb);
     z-index: 2000;
-    position: relative;
 }
 
 .header-left {
@@ -73,12 +72,12 @@ body {
 
 .nav a {
     position: relative;
-    text-decoration: none;
-    color: whitesmoke;
     font-size: 18px;
     font-weight: 500;
-    opacity: 0.8;
     padding: 6px 0;
+    text-decoration: none;
+    opacity: 0.8;
+    color: whitesmoke;
 }
 
 .nav a:hover {
@@ -109,8 +108,8 @@ body {
 .header-right {
     display: flex;
     align-items: center;
-    gap: 24px;
     justify-self: end;
+    gap: 24px;
 }
 
 .lang {
@@ -120,17 +119,17 @@ body {
 .lang-btn {
     display: flex;
     align-items: center;
-    gap: 8px;
-    background: var(--bg-dgray-rgba);
-    color: white;
-    border: 1px solid var(--bg-gray-rgba);
-    padding: 8px 16px;
-    border-radius: 28px;
-    cursor: pointer;
+    font-family: "Space Grotesk", sans-serif;
     font-size: 14px;
+    gap: 8px;
+    padding: 8px 16px;
+    color: white;
+    background: var(--bg-dgray-rgba);
+    border: 1px solid var(--bg-gray-rgba);
+    border-radius: 28px;
     backdrop-filter: blur(10px);
     transition: 0.25s ease;
-    font-family: "Space Grotesk", sans-serif;
+    cursor: pointer;
 }
 
 .lang-btn:hover {
@@ -138,9 +137,9 @@ body {
 }
 
 .arrow {
+    display: inline-block;
     font-size: 20px;
     opacity: 0.7;
-    display: inline-block;
     transition: transform 0.25s ease;
 }
 
@@ -149,24 +148,23 @@ body {
 }
 
 .lang-dropdown {
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    font-family: "Inter", sans-serif;
     top: 120%;
     right: 0;
     width: 260px;
     padding: 10px;
-    background: var(--bg-dark);
-    backdrop-filter: blur(14px);
-    border-radius: 18px;
-    border: 1px solid var(--bg-gray-rgba);
-    display: flex;
-    flex-direction: column;
     gap: 8px;
+    background: var(--bg-dark);
+    border: 1px solid var(--bg-gray-rgba);
+    border-radius: 18px;
     opacity: 0;
+    backdrop-filter: blur(14px);
     transform: translateY(10px);
-    pointer-events: none;
     transition: 0.25s ease;
-    font-family: "Inter", sans-serif;
-
+    pointer-events: none;
 }
 
 .lang-dropdown.show {
@@ -196,9 +194,9 @@ body {
 
 .my-video {
     text-decoration: none;
-    color: white;
     font-size: 16px;
     font-weight: 500;
+    color: white;
     padding: 8px 18px;
     border-radius: 24px;
     background: var(--bg-dgray-rgba);
@@ -212,15 +210,15 @@ body {
 
 .my-video-btn {
     position: relative;
-    overflow: hidden;
     display: inline-flex;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
     align-items: center;
     justify-content: center;
     padding: 10px 22px;
     border-radius: 999px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
+    overflow: hidden;
     color: white;
     background: var(--bg-dgray-rgba);
     border: 1px solid var(--bg-gray-rgba);
@@ -242,11 +240,11 @@ body {
     position: absolute;
     border-radius: 50%;
     background: var(--bg-gray-rgba);
+    opacity: 0;
     width: 20px;
     height: 20px;
     transform: scale(0);
     pointer-events: none;
-    opacity: 0;
 }
 
 .ripple.enter {
@@ -281,16 +279,16 @@ body {
 
 .hamburger {
     display: none;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
     width: 30px;
     height: 20px;
     padding: 0;
-    flex-direction: column;
-    justify-content: space-between;
     background: none;
     border: none;
-    cursor: pointer;
     z-index: 9999;
-    position: relative;
+    cursor: pointer;
 }
 
 .hamburger span {
@@ -325,26 +323,21 @@ body {
 
 .mobile-menu {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
     top: 0;
     right: -100%;
     width: 260px;
     height: 100vh;
+    padding: 120px 40px 40px 40px;
+    gap: 32px;
+    z-index: 1000;
     background: var(--bg-dgray-rgba);
     backdrop-filter: blur(18px);
-    display: flex;
-    flex-direction: column;
-    padding: 120px 40px;
-    gap: 32px;
     transition: right 0.45s cubic-bezier(.4,0,.2,1);
-    z-index: 1000;
-    pointer-events: none;
-    display: flex;
-    flex-direction: column;
-    padding: 120px 40px 40px 40px; 
-    gap: 32px;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-
+    pointer-events: none;
 }
 
 .mobile-menu.show {
@@ -353,27 +346,27 @@ body {
 }
 
 .mobile-menu a {
-    color: white;
     text-decoration: none;
     font-size: 22px;
+    color: white;
     opacity: 0;
     transform: translateX(30px);
 }
 
 .video-link {
-    margin-top: auto;
-    background: transparent;
-    padding: 5px 0px;
     position: relative;
     display: block;
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    background: var(--bg-dgray-rgba);
-    color: white;
+    font-size: 16px;
     text-align: center;
     text-decoration: none;
+    margin-top: auto;
+    padding: 5px 0px;
+    margin-left: -20px;
+    width: calc(100% + 40px);
+    color: white;
+    background: transparent;
+    background: var(--bg-dgray-rgba);
     border-radius: 20px;
-    font-size: 16px;
     transition: all 0.3s ease;
 }
 
@@ -423,15 +416,15 @@ body {
     .header-center {
         display: none;
         position: fixed;
+        flex-direction: column;
+        align-items: center;
         top: 90px;
         left: 0;
         width: 100%;
-        background: var(--bg-dark);
-        backdrop-filter: blur(14px);
-        flex-direction: column;
-        align-items: center;
         gap: 26px;
         padding: 40px 0;
+        background: var(--bg-dark);
+        backdrop-filter: blur(14px);
         transform: translateY(-120%);
         transition: 0.35s ease;
     }
@@ -451,9 +444,9 @@ body {
 }
 
 .hero {
-    min-height: 100vh;
     display: flex;
     align-items: flex-start;
+    min-height: 100vh;
     padding: 0 5%;
     padding-top: 50px;
 }
@@ -468,8 +461,8 @@ body {
     font-family: monospace;
     font-size: 45px;
     font-weight: 800;
-    line-height: 1.15;
     letter-spacing: -1px;
+    line-height: 1.15;
 }
 
 .hero h1 span {
@@ -486,11 +479,11 @@ body {
 
 .desc {
     font-family: "Inter", sans-serif;
-    margin-top: 24px;
     font-size: 18px;
-    color: #a1a1aa;
     line-height: 1.7;
     text-align: justify;
+    margin-top: 24px;
+    color: #a1a1aa;
 }
 
 .info-cards {
@@ -503,12 +496,12 @@ body {
 .card {
     position: relative;
     overflow: hidden;
-    background: var(--bg-dgray-rgba);
-    border: 1px solid var(--bg-gray-rgba);
-    backdrop-filter: blur(6px);
     padding: 10px 15px;
     border-radius: 11px;
     min-width: 180px;
+    background: var(--bg-dgray-rgba);
+    border: 1px solid var(--bg-gray-rgba);
+    backdrop-filter: blur(6px);
     transition: 0.25s ease;
 }
 
@@ -525,8 +518,8 @@ body {
     rgba(255,255,255,0.18), transparent 60%);
     opacity: 0;
     transition: opacity 0.25s ease;
-    pointer-events: none;
     filter: blur(24px);
+    pointer-events: none;
 }
 
 .hover-glow:hover::before {
@@ -539,19 +532,19 @@ body {
 
 .label {
     display: block;
+    font-family: "Space Grotesk", sans-serif;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #a1a1aa;
     margin-bottom: 6px;
-    font-family: "Space Grotesk", sans-serif;
+    color: #a1a1aa;
 }
 
 .card h3 {
+    font-family: "Inter", sans-serif;
     font-size: 13px;
     font-weight: 600;
     color: white;
-    font-family: "Inter", sans-serif;
 }
 
 .cta-buttons {
@@ -564,13 +557,13 @@ body {
 .btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 0px 18px;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.25s ease;
+    gap: 8px;
+    padding: 0px 18px;
     border-radius: 10px;
+    transition: all 0.25s ease;
 }
 
 .btn.primary {
@@ -581,8 +574,8 @@ body {
 .shine-btn {
     position: relative;
     display: inline-block;
-    overflow: visible;
     z-index: 1;
+    overflow: visible;
     transition: 0.25s ease;
 }
 
@@ -598,43 +591,43 @@ body {
     bottom: -8px;
     left: -8px;
     right: -8px;
-    border-radius: 14px;
     border: 2px solid var(--bg-soft);
+    border-radius: 14px;
     opacity: 0;
     transition: 0.3s ease;
     pointer-events: none;
 }
 
 .shine-btn:hover::after {
-    opacity: 1;
     box-shadow: 0 0 10px var(--bg-indigo);
+    opacity: 1;
 }
 
 .btn-inner {
     position: relative;
-    overflow: hidden;
-    border-radius: 10px;
     display: inline-block;
     align-items: center;
     font-family: "Inter", sans-serif;
     gap: 8px;
     padding: 12px 22px;
-    background: white;
     color: black;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .btn.outline {
+    color: white;
     background: var(--bg-dgray-rgba);
     border: 1px solid var(--bg-gray-rgba);
-    color: white;
     backdrop-filter: blur(8px);
 }
 
 .btn-cv-hover {
-    padding: 6px 22px 6px 12px !important;
     position: relative;
-    overflow: hidden;
+    padding: 6px 22px 6px 12px !important;
     gap: 12px !important;
+    overflow: hidden;
 }
 
 .icon-wrapper {
@@ -658,17 +651,16 @@ body {
 .arrow-icon {
     position: absolute;
     font-size: 14px;
+    line-height: 1;
+    color: black;
     opacity: 0;
     transform: translate(-10px, 10px);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    color: black;
-    line-height: 1;
 }
 
 .btn-cv-hover:hover {
-    background: white !important;
     color: black !important;
-    
+    background: white !important;
 }
 
 .btn-cv-hover:hover .icon-wrapper {
@@ -701,9 +693,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
     width: 40px;
     height: 40px;
-    text-decoration: none;
     border-radius: 8px;
     background-color: transparent;
     transition: all 0.3s ease;
@@ -736,14 +728,14 @@ body {
 
 .profile-circle {
     position: relative;
-    width: 425px;
-    height: 425px;
-    border: 1px solid var(--bg-dgray-rgba);
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 425px;
+    height: 425px;
     padding: 20px;
+    border: 1px solid var(--bg-dgray-rgba);
+    border-radius: 50%;
 }
 
 .profile-img {
@@ -758,22 +750,22 @@ body {
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 14px;
-    border-radius: 999px;
-    background: rgba(35, 35, 50, 0.85);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--bg-gray-rgba);
-    color: white;
+    font-family: "Inter", sans-serif;
     font-size: 13px;
     font-weight: 600;
-    font-family: "Inter", sans-serif;
-    pointer-events: none;
+    gap: 8px;
+    padding: 8px 14px;
+    color: white;
+    background: rgba(35, 35, 50, 0.85);
+    border: 1px solid var(--bg-gray-rgba);
+    border-radius: 999px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,.45), 0 0 20px rgba(168,85,247,.15);
     opacity: 0;
     transform: scale(.85);
     transition: opacity .25s ease, transform .25s ease;
-    box-shadow: 0 8px 25px rgba(0,0,0,.45), 0 0 20px rgba(168,85,247,.15);
     white-space: nowrap;
+    pointer-events: none;
 }
 
 .follow-name.show {
@@ -784,38 +776,38 @@ body {
 .mini-avatar {
     width: 22px;
     height: 22px;
-    border-radius: 50%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .status-badge {
     position: absolute;
-    bottom: 40px;
-    right: 0px;
     display: flex;
     align-items: center;
+    bottom: 40px;
+    right: 0px;
     gap: 8px;
-    background: #000;
     padding: 6px 15px;
-    border-radius: 50px;
+    background: #000;
     border: 1px solid var(--bg-dgray-rgba);
+    border-radius: 50px;
     white-space: nowrap;
 }
 
 .status-text {
-    color: white;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1px;
+    color: white;
     cursor: default;
 }
 
 .status-dot {
+    position: relative;
     width: 8px;
     height: 8px;
     background-color: #22c55e;
     border-radius: 50%;
-    position: relative;
 }
 
 .status-dot::after {
@@ -857,8 +849,8 @@ body {
 }
 
 .about {
-    padding: 200px 5%;
     color: white;
+    padding: 200px 5%;
 }
 
 .about-container {
@@ -867,77 +859,77 @@ body {
 }
 
 .section-label {
+    font-family: "Space Grotesk", sans-serif;
     font-size: 13px;
+    text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--neon);
-    text-transform: uppercase;
-    font-family: "Space Grotesk", sans-serif;
     cursor: default;
 }
 
 .about-title {
+    font-family: monospace;
     font-size: 43px;
     font-weight: 800;
     margin-top: 14px;
     line-height: 1.1;
-    font-family: monospace;
     cursor: default;
 }
 
 .about-desc {
-    margin-top: 20px;
-    max-width: 100%;
-    color: #a1a1aa;
-    font-size: 16px;
-    line-height: 1.8;
     text-align: justify;
     font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #a1a1aa;
+    margin-top: 20px;
+    max-width: 100%;
+    line-height: 1.8;
     cursor: default;
 }
 
 .about-card {
-    margin-top: 50px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
     gap: 40px;
     padding: 40px 60px;
     background: var(--bg-dgray-rgba);
     border: 1px solid var(--bg-gray-rgba);
-    backdrop-filter: blur(14px);
     border-radius: 20px;
+    backdrop-filter: blur(14px);
     transition: 0.3s ease;
 }
 
 .about-card:hover {
-    transform: translateY(-4px);
     box-shadow: 0 0 30px rgba(var(--neon-rgb), 0.15);
+    transform: translateY(-4px);
 }
 
 .mini-label {
+    font-family: "Space Grotesk", sans-serif;
     font-size: 11px;
     letter-spacing: 2px;
     color: #a1a1aa;
-    font-family: "Space Grotesk", sans-serif;
     cursor: default;
 }
 
 .about-left h3 {
-    margin-top: 8px;
-    font-size: 34px;
     font-family: monospace;
+    font-size: 34px;
+    margin-top: 8px;
     cursor: default;
 }
 
 .about-left p {
-    margin-top: 10px;
+    text-align: justify;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
     color: #a1a1aa;
+    margin-top: 10px;
     max-width: 520px;
     line-height: 1.7;
-    font-family: "Inter", sans-serif;
     cursor: default;
-    font-size: 15px;
-    text-align: justify;
 }
 
 .about-right {
@@ -949,8 +941,8 @@ body {
 .about-avatar {
     width: 95px;
     height: 95px;
-    border-radius: 50%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .about-meta {
@@ -961,10 +953,10 @@ body {
 }
 
 .about-meta strong {
-    color: white;
     font-family: "Space Grotesk", sans-serif;
-    letter-spacing: 1px;
     font-size: 18px;
+    letter-spacing: 1px;
+    color: white;
     cursor: default;
 }
 
@@ -984,28 +976,28 @@ body {
 }
 
 .eyebrow {
+    font-family: "Space Grotesk", sans-serif;
     font-size: 12px;
     letter-spacing: 3px;
-    text-transform: uppercase;
     color: var(--neon);
+    text-transform: uppercase;
     margin-bottom: 20px;
-    font-family: "Space Grotesk", sans-serif;
 }
 
 .section-title {
+    font-family: monospace;
     font-size: 45px;
     font-weight: 800;
+    color: white;
     line-height: 1.1;
     margin-bottom: 24px;
-    font-family: monospace;
-    color: white;
 }
 
 .section-desc {
-    max-width: 100%;
-    font-size: 15px;
-    line-height: 1.7;
-    color: #a1a1aa;
     font-family: "Inter", sans-serif;
+    font-size: 15px;
     text-align: justify;
+    color: #a1a1aa;
+    max-width: 100%;
+    line-height: 1.7;
 }
