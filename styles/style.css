@@ -130,6 +130,7 @@ body {
     font-size: 14px;
     backdrop-filter: blur(10px);
     transition: 0.25s ease;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .lang-btn:hover {
@@ -164,6 +165,8 @@ body {
     transform: translateY(10px);
     pointer-events: none;
     transition: 0.25s ease;
+    font-family: "Inter", sans-serif;
+
 }
 
 .lang-dropdown.show {
@@ -340,6 +343,8 @@ body {
     padding: 120px 40px 40px 40px; 
     gap: 32px;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+
 }
 
 .mobile-menu.show {
@@ -531,17 +536,19 @@ body {
 
 .label {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #a1a1aa;
     margin-bottom: 6px;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .card h3 {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
     color: white;
+    font-family: "Inter", sans-serif;
 }
 
 .cta-buttons {
@@ -606,6 +613,7 @@ body {
     border-radius: 10px;
     display: inline-block;
     align-items: center;
+    font-family: "Inter", sans-serif;
     gap: 8px;
     padding: 12px 22px;
     background: white;
@@ -657,11 +665,12 @@ body {
 .btn-cv-hover:hover {
     background: rgba(255, 255, 255, 1) !important;
     color: black !important;
+    
 }
 
 .btn-cv-hover:hover .icon-wrapper {
-    width: 28px;
-    height: 28px;
+    width: 19px;
+    height: 19px;
 }
 
 .btn-cv-hover:hover .dot {
@@ -673,6 +682,10 @@ body {
 .btn-cv-hover:hover .arrow-icon {
     opacity: 1;
     transform: translate(0, 0);
+}
+
+.text-label {
+    font-family: "Inter", sans-serif;
 }
 
 .social-links-container {
