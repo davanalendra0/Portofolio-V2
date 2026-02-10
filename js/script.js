@@ -176,3 +176,4 @@ document.querySelectorAll(".js-marquee").forEach(marquee => {
 
     animate();
 });
+

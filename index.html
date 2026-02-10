@@ -10,7 +10,7 @@
 <body>
     
 
-    <header class="header">
+    <header class="header" id="mainHeader">
         <div class="header-left">
             <a href="index.html" class="logo">
                 <img src="asset/img/logo.png" alt="Dava Logo">
@@ -432,6 +432,103 @@
             </div>
         </div>
     </section>
+
+    <section class="certifications-section">
+        <p class="section-title">CERTIFICATIONS</p>
+        <h2 class="section-subtitle">Certifications & Awards</h2>
+        <p class="section-description">
+            Professional certifications and achievements that validate my expertise in various technologies and methodologies.
+        </p>
+
+        <div class="cert-grid">
+            <div class="cert-card"
+            data-title="Dicoding Indonesia - lorem"
+            data-issuer="Dicoding Indonesia • Issued 2024"
+            data-issued="July 2024"
+            data-expire="No Expiration"
+            data-credential="lorem"
+            data-description="lorem"
+            data-image="asset/img/dicoding.jpg">
+                <div class="cert-image-placeholder">
+                    <img src="asset/img/dicoding.jpg" alt="Dicoding">
+                </div>
+                <div class="cert-content">
+                    <h3>Dicoding Indonesia</h3>
+                    <p>Dicoding Indonesia • Issued 2024</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-image-placeholder">
+                    <img src="" alt="">
+                </div>
+                <div class="cert-content">
+                    <h3>lorem</h3>
+                    <p>lorem • Issued 2024</p>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-image-placeholder">
+                    <img src="" alt="">
+                </div>
+                <div class="cert-content">
+                    <h3>lorem</h3>
+                    <p>lorem • Issued 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="cert-modal" id="certModal">
+        <div class="cert-overlay"></div>
+
+        <div class="cert-detail">
+            <button class="cert-close">✕</button>
+
+            <img id="detailImg" class="detail-img"/>
+
+            <h2 id="detailTitle"></h2>
+            <p id="detailIssuer" class="detail-issuer"></p>
+
+            <div class="detail-grid">
+                <div class="info-box">
+                    <div class="info-icon-wrap">
+                        <img src="asset/icons/date.svg" alt="" class="info-icon">
+                    </div>
+                    <div class="info-text">
+                        <span>Issued On</span>
+                        <b id="detailIssued"></b>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-icon-wrap">
+                        <img src="asset/icons/clock.svg" alt="" class="info-icon">
+                    </div>
+                    <div class="info-text">
+                        <span>Expires On</span>
+                        <b id="detailExpire"></b>
+                    </div>
+                </div>
+
+                <div class="info-box full">
+                    <div class="info-icon-wrap">
+                        <img src="asset/icons/hashtag.svg" alt="" class="info-icon">
+                    </div>
+                    <div class="info-text">
+                        <span>Credential ID</span>
+                        <b id="detailCredential"></b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-desc">
+                <h4>What I Learned</h4>
+                <p id="detailDesc"></p>
+            </div>
+        </div>
+    </div>
+
 
     <section class="experience-section" id="experience">
         <div class="experience-container">
