@@ -967,7 +967,7 @@ body {
 }
 
 .tech-stack {
-    padding: 200px 0;
+    padding: 120px 0;
 }
 
 .tech-stack .container {
@@ -1005,3 +1005,67 @@ body {
     cursor: default;
 }
 
+.marquee-block {
+    margin-top: 80px;
+}
+
+.marquee-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #a1a1aa;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.marquee {
+    overflow: hidden;
+    width: 100%;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 60px;
+    width: max-content;
+}
+
+.stack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 90px;
+    flex-shrink: 0;
+}
+
+.stack-item img {
+    height: 40px;
+    width: auto;
+    opacity: 0.8;
+    filter: brightness(0) invert(1);
+    transition: .25s;
+}
+
+.stack-item span {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+    cursor: default;
+}
+
+.stack-item:hover img {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.stack-item:hover span {
+    color: #fff;
+}
+
+.marquee img {
+    height: 42px;
+    flex-shrink: 0;
+    opacity: .75;
+}

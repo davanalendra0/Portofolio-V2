@@ -152,3 +152,27 @@ circle.addEventListener("mousemove", (e) => {
     follow.style.top = y + offsetY + "px";
 });
 
+document.querySelectorAll(".js-marquee").forEach(marquee => {
+    const speed = 0.5; // kecil = lebih halus
+
+    let scrollAmount = 0;
+    let isPaused = false;
+
+    marquee.addEventListener("mouseenter", () => isPaused = true);
+    marquee.addEventListener("mouseleave", () => isPaused = false);
+
+    function animate() {
+        if (!isPaused) {
+            scrollAmount += speed;
+            marquee.scrollLeft = scrollAmount;
+
+            if (scrollAmount >= marquee.scrollWidth / 2) {
+            scrollAmount = 0;
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+});
