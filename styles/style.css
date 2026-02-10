@@ -982,6 +982,7 @@ body {
     color: var(--neon);
     text-transform: uppercase;
     margin-bottom: 20px;
+    cursor: default;
 }
 
 .section-title {
@@ -991,6 +992,7 @@ body {
     color: white;
     line-height: 1.1;
     margin-bottom: 24px;
+    cursor: default;
 }
 
 .section-desc {
@@ -1000,4 +1002,6 @@ body {
     color: #a1a1aa;
     max-width: 100%;
     line-height: 1.7;
+    cursor: default;
 }
+
