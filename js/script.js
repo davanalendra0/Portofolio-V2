@@ -209,3 +209,20 @@ document.querySelector(".cert-overlay").onclick = closeModal;
 document.addEventListener("keydown", e => {
     if(e.key === "Escape") closeModal();
 });
+
+document.querySelectorAll(".project-tools").forEach(container => {
+    const maxVisible = 5;
+    const items = Array.from(container.children);
+
+    if (items.length > maxVisible) {
+        const hiddenCount = items.length - maxVisible;
+
+        items.slice(maxVisible).forEach(el => el.style.display = "none");
+
+        const more = document.createElement("span");
+        more.className = "tools-more";
+        more.textContent = `+${hiddenCount}`;
+
+        container.appendChild(more);
+    }
+});
