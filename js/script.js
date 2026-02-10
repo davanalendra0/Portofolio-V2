@@ -177,3 +177,35 @@ document.querySelectorAll(".js-marquee").forEach(marquee => {
     animate();
 });
 
+const modal = document.getElementById("certModal");
+const header = document.getElementById("mainHeader");
+
+document.querySelectorAll(".cert-card").forEach(card => {
+    card.addEventListener("click", () => {
+
+        document.getElementById("detailImg").src = card.dataset.image;
+        document.getElementById("detailTitle").textContent = card.dataset.title;
+        document.getElementById("detailIssuer").textContent = card.dataset.issuer;
+        document.getElementById("detailIssued").textContent = card.dataset.issued;
+        document.getElementById("detailExpire").textContent = card.dataset.expire;
+        document.getElementById("detailCredential").textContent = card.dataset.credential;
+        document.getElementById("detailDesc").textContent = card.dataset.description;
+
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+        if (header) header.style.display = "none";
+    });
+});
+
+function closeModal(){
+    modal.classList.remove("active");
+    document.body.style.overflow = "auto";
+    if (header) header.style.display = "";
+}
+
+document.querySelector(".cert-close").onclick = closeModal;
+document.querySelector(".cert-overlay").onclick = closeModal;
+
+document.addEventListener("keydown", e => {
+    if(e.key === "Escape") closeModal();
+});
