@@ -441,3 +441,31 @@ body {
         margin-left: 12px;
     }
 }
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.updated {
+    color: #a1a1a1;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom: 16px;
+    color: #d6d6d6;
+}
