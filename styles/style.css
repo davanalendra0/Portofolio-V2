@@ -1724,8 +1724,9 @@ body {
 .footer h4 {
     color: white;
     margin-bottom: 12px;
-    font-size: 14px;
+    font-size: 16px;
     cursor: default;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .footer ul {
@@ -1740,8 +1741,9 @@ body {
 .footer a {
     color: #9ca3af;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     transition: 0.2s;
+    font-family: "Inter", sans-serif;
 }
 
 .footer a:hover {
@@ -1777,10 +1779,11 @@ body {
 
 .copyright {
     text-align: center;
-    border-top: 1px solid #222;
     margin-top: 40px;
     padding: 20px;
     font-size: 13px;
     opacity: 0.6;
     cursor: default;
+    font-family: monospace;
+
 }
