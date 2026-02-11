@@ -451,21 +451,28 @@ body {
 h1 {
     font-size: 40px;
     margin-bottom: 12px;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .updated {
     color: #a1a1a1;
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 40px;
+    font-family: monospace;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 23px;
     margin-top: 32px;
     margin-bottom: 8px;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 p {
     margin-bottom: 16px;
-    color: #d6d6d6;
+    color: gray;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
 }
