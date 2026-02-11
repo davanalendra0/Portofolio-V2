@@ -1111,7 +1111,6 @@ body {
     border: 1px solid #333;
     transition: transform 0.3s ease;
     cursor: pointer;
-    font-family: "Inter", sans-serif;
 }
 
 .cert-card:hover {
@@ -1121,6 +1120,18 @@ body {
 
 .cert-data {
     display: none !important;
+}
+
+#detailTitle {
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 25px;
+}
+
+#detailIssuer {
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
 }
 
 .cert-image-placeholder {
@@ -1141,14 +1152,16 @@ body {
 }
 
 .cert-content h3 {
-    font-size: 1.1rem;
+    font-size: 21px;
     margin-bottom: 8px;
     line-height: 1.4;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 .cert-content p {
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
 }
 
 .cert-modal {
@@ -1257,31 +1270,32 @@ body {
     opacity: 0.85;
 }
 
-.cert-info-text span {
-    display: block;
-    font-size: 0.75rem;
-    color: #888;
-    margin-bottom: 2px;
-}
-
 .cert-info-text b {
-    font-size: 0.95rem;
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: white;
 }
 
 .cert-info-box span {
     display: block;
-    color: #888;
-    font-size: 0.75rem;
+    color: white;
+    font-size: 15px;
     margin-bottom: 4px;
+    font-family: monospace;
 }
 
 .cert-detail-desc h4 {
     margin-bottom: 8px;
+    color: white;
+    font-family: monospace;
+    font-size: 18px;
 }
 
 .cert-detail-desc p {
     color: #cfcfcf;
     line-height: 1.6;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
 }
 
 .projects-section {

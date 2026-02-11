@@ -183,12 +183,25 @@ const header = document.getElementById("mainHeader");
 document.querySelectorAll(".cert-card").forEach(card => {
     card.addEventListener("click", () => {
 
-        document.getElementById("detailTitle").textContent = card.dataset.title;
-        document.getElementById("detailIssuer").textContent = card.dataset.issuer;
-        document.getElementById("detailIssued").textContent = card.dataset.issued;
-        document.getElementById("detailExpire").textContent = card.dataset.expire;
-        document.getElementById("detailCredential").textContent = card.dataset.credential;
-        document.getElementById("detailDesc").textContent = card.dataset.description;
+        const data = card.querySelector(".cert-data");
+
+        document.getElementById("detailTitle").textContent =
+            data.querySelector(".d-title").textContent;
+
+        document.getElementById("detailIssuer").textContent =
+            data.querySelector(".d-issuer").textContent;
+
+        document.getElementById("detailIssued").textContent =
+            data.querySelector(".d-issued").textContent;
+
+        document.getElementById("detailExpire").textContent =
+            data.querySelector(".d-expire").textContent;
+
+        document.getElementById("detailCredential").textContent =
+            data.querySelector(".d-credential").textContent;
+
+        document.getElementById("detailDesc").textContent =
+            data.querySelector(".d-desc").textContent;
 
         modal.classList.add("active");
         document.body.style.overflow = "hidden";
