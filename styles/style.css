@@ -1652,7 +1652,6 @@ body {
     }
 }
 
-
 .job-title-wrapper h3 {
     font-size: 18px;
     color: #ffffff;
@@ -1702,14 +1701,14 @@ body {
 .job-status-inactive {
     width: 8px;
     height: 8px;
-    background: darkblue;
+    background: rgb(83, 83, 83);
     border-radius: 50%;
 }
 
 .experience-item.inactive .job-date-badge {
-    background: rgba(31, 111, 235, 0.15);
-    color: #58a6ff;
-    border: 1px solid rgba(88, 166, 255, 0.35);
+    background: var(--bg-gray-rgba);
+    color: white;
+    border: 1px solid var(--bg-dgray-rgba);
 }
 
 .footer {
