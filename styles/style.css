@@ -1308,6 +1308,19 @@ body {
     font-family: "Inter", sans-serif;
     font-size: 14px;
     cursor: default;
+    padding-bottom: 15px;
+}
+
+.cert-link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.cert-link:hover {
+    background: #242424;
+    border-color: var(--neon);
+    transform: translateY(-2px);
 }
 
 .projects-section {

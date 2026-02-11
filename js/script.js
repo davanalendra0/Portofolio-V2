@@ -203,6 +203,11 @@ document.querySelectorAll(".cert-card").forEach(card => {
         document.getElementById("detailDesc").textContent =
             data.querySelector(".d-desc").textContent;
 
+const file = data.querySelector(".d-link")?.textContent;
+const detailLink = document.getElementById("detailLink");
+
+detailLink.href = file;
+
         modal.classList.add("active");
         document.body.style.overflow = "hidden";
         if (header) header.style.display = "none";
