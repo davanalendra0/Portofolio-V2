@@ -1118,6 +1118,10 @@ body {
     border-color: #444;
 }
 
+.cert-data {
+    display: none !important;
+}
+
 .cert-image-placeholder {
     width: 100%;
     aspect-ratio: 16 / 10;

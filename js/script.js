@@ -183,7 +183,6 @@ const header = document.getElementById("mainHeader");
 document.querySelectorAll(".cert-card").forEach(card => {
     card.addEventListener("click", () => {
 
-        document.getElementById("detailImg").src = card.dataset.image;
         document.getElementById("detailTitle").textContent = card.dataset.title;
         document.getElementById("detailIssuer").textContent = card.dataset.issuer;
         document.getElementById("detailIssued").textContent = card.dataset.issued;
