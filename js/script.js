@@ -124,7 +124,7 @@ cards.forEach(card => {
     });
 });
 
-const circle = document.querySelector(".profile-circle");
+const circle = document.querySelector(".hero-profile-circle");
 const follow = document.querySelector(".follow-name");
 
 circle.addEventListener("mouseenter", () => {
@@ -153,7 +153,7 @@ circle.addEventListener("mousemove", (e) => {
 });
 
 document.querySelectorAll(".js-marquee").forEach(marquee => {
-    const speed = 0.5; // kecil = lebih halus
+    const speed = 0.5;
 
     let scrollAmount = 0;
     let isPaused = false;
