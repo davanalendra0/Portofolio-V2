@@ -458,9 +458,15 @@ body {
     text-align: center;
 }
 
+.container h1 {
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+}
+
 .desc {
     margin: 16px 0 40px;
-    color: #aaa;
+    color: #a1a1a1;
+    font-family: "Inter", sans-serif;
 }
 
 .contact-links {
@@ -468,6 +474,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 18px;
+    font-family: monospace;
 }
 
 .contact-item {
@@ -503,7 +510,7 @@ body {
 }
 
 .footer {
-    color: #d1d5db;
+    color: #a1a1a1;
     padding: 50px 0 0;
     border-top: 1px solid #15151c;
 
@@ -542,7 +549,7 @@ body {
 }
 
 .footer a {
-    color: #9ca3af;
+    color: #a1a1a1;
     text-decoration: none;
     font-size: 12px;
     transition: 0.2s;
