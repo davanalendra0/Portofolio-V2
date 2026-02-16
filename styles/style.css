@@ -725,6 +725,14 @@ body {
     margin-left: auto;
 }
 
+.circle-wrapper {
+    position: relative;
+    width: 425px;
+    height: 425px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
 .hero-profile-circle {
     position: relative;
     display: flex;
