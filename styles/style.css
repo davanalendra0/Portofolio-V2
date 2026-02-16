@@ -1493,23 +1493,21 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Kegelapan saat di-hover */
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0; /* Sembunyi secara default */
+    opacity: 0;
     z-index: 2;
     transition: opacity 0.3s ease;
 }
 
-/* Wadah Teks dan Ikon di tengah overlay */
 .overlay-content {
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    /* Efek teks muncul sedikit dari bawah ke atas saat hover */
     transform: translateY(20px); 
     transition: transform 0.4s cubic-bezier(0.33, 1, 0.68, 1);
 }
@@ -1522,24 +1520,18 @@ body {
     text-transform: uppercase;
 }
 
-/* --- LOGIKA ANIMASI SAAT DI-HOVER --- */
-
-/* 1. Gambar Membesar Pelan */
 .project-preview:hover img {
     transform: scale(1.1);
 }
 
-/* 2. Overlay Hitam Muncul */
 .project-preview:hover .preview-overlay {
     opacity: 1;
 }
 
-/* 3. Teks & Ikon Naik ke Posisi Tengah */
 .project-preview:hover .overlay-content {
     transform: translateY(0);
 }
 
-/* Memastikan ikon SVG berwarna putih dan ukurannya pas */
 .overlay-content svg {
     stroke: white;
     width: 28px;
