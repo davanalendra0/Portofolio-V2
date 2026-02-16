@@ -153,10 +153,14 @@ circle.addEventListener("mousemove", (e) => {
 });
 
 document.querySelectorAll(".js-marquee").forEach(marquee => {
-    const speed = 0.5;
+    const track = marquee.querySelector(".marquee-track");
+    
+    const trackContent = track.innerHTML;
+    track.innerHTML = trackContent.repeat(4); 
 
     let scrollAmount = 0;
     let isPaused = false;
+    const speed = 0.5;
 
     marquee.addEventListener("mouseenter", () => isPaused = true);
     marquee.addEventListener("mouseleave", () => isPaused = false);
@@ -164,13 +168,13 @@ document.querySelectorAll(".js-marquee").forEach(marquee => {
     function animate() {
         if (!isPaused) {
             scrollAmount += speed;
-            marquee.scrollLeft = scrollAmount;
-
-            if (scrollAmount >= marquee.scrollWidth / 2) {
-            scrollAmount = 0;
+            
+            if (scrollAmount >= track.scrollWidth / 4) {
+                scrollAmount = 0;
             }
+            
+            track.style.transform = `translateX(-${scrollAmount}px)`;
         }
-
         requestAnimationFrame(animate);
     }
 

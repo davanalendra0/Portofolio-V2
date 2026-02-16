@@ -1021,12 +1021,15 @@ body {
 .marquee {
     overflow: hidden;
     width: 100%;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
 .marquee-track {
     display: flex;
     gap: 60px;
     width: max-content;
+    will-change: transform;
 }
 
 .stack-item {
