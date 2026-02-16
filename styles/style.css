@@ -1749,6 +1749,16 @@ body {
     margin-bottom: 20px;
 }
 
+.list-jobdesc {
+    margin-left: 14px;
+    max-width: 860px;
+}
+
+.list-jobdesc li {
+    margin-bottom: 2px;
+    text-align: justify;
+}
+
 .job-tech-tags {
     font-family: monospace;
     display: flex;
