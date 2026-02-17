@@ -1866,6 +1866,36 @@ body {
     height: 22px;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #18181b;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #3f3f46;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0; /* Sembunyi awal */
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: #27272a;
+    transform: translateY(-5px);
+}
+
 .copyright {
     text-align: center;
     margin-top: 40px;
