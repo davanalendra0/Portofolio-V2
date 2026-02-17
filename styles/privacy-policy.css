@@ -11,6 +11,10 @@
     --bg-dgray-rgba: rgba(255,255,255,0.06);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;

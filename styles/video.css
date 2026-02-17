@@ -1,3 +1,20 @@
+:root {
+    --bg-dark: #0B0B12;
+    --bg-indigo: #1A1A2E;
+    --bg-soft: #2A2A40;
+    --neon: #A855F7;
+    --bg-dark-rgb: 11, 11, 18;
+    --bg-indigo-rgb: 26, 26, 46;
+    --bg-soft-rgb: 42, 42, 64;
+    --neon-rgb: 168, 85, 247;
+    --bg-gray-rgba: rgba(255,255,255,0.15);
+    --bg-dgray-rgba: rgba(255,255,255,0.06);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
