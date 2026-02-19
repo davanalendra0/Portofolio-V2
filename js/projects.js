@@ -80,3 +80,25 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
         mobileMenu.classList.remove("show");
     });
 });
+
+document.querySelectorAll(".project-tools").forEach(container => {
+    const maxVisible = 5;
+    // Ambil hanya elemen IMG saja
+    const items = Array.from(container.querySelectorAll("img"));
+
+    if (items.length > maxVisible) {
+        const hiddenCount = items.length - maxVisible;
+
+        // Sembunyikan item yang melebihi batas
+        items.slice(maxVisible).forEach(el => el.style.display = "none");
+
+        // Cek apakah span .tools-more sudah ada (supaya tidak double saat ganti bahasa)
+        let more = container.querySelector(".tools-more");
+        if (!more) {
+            more = document.createElement("span");
+            more.className = "tools-more";
+            container.appendChild(more);
+        }
+        more.textContent = `+${hiddenCount}`;
+    }
+});
