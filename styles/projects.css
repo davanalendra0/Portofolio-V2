@@ -505,18 +505,21 @@ body {
 
 .projects-section {
     padding: 120px 50px;
+    overflow: visible;
 }
 
 .projects-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    display: flex;
+    justify-content: space-between;
     gap: 70px;
+    align-items: flex-start;
 }
 
 .projects-container {
-    width: 100%;
+    flex: 1;
+    padding-top: 80px;
 }
 
 .project-card {
@@ -526,6 +529,10 @@ body {
     padding: 80px 0;
     align-items: center;
     transition: 0.3s ease;
+}
+
+.project-card:first-child {
+    padding-top: 0;
 }
 
 .project-card:nth-child(even) .project-info {
@@ -677,7 +684,11 @@ body {
 }
 
 .sort-container {
-    width: 250px; margin: 20px;
+    width: 250px; 
+    position: sticky;
+    flex-shrink: 0;
+    top: 0;
+    padding-top: 120px;
 }
 
 .sort-label {
@@ -748,6 +759,51 @@ body {
 
 .show {
     display: block;
+}
+
+.tags-section {
+    padding: 20px;
+    max-width: 400px; /* Sesuaikan dengan layout sidebar kamu */
+}
+
+.tags-title {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap; /* Supaya otomatis turun ke bawah jika penuh */
+    gap: 10px;
+}
+
+.tag-btn {
+    background: transparent;
+    color: #ccc;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.tag-btn:hover {
+    color: #fff;
+}
+
+.tag-btn.active {
+    background-color: #f3f3f3; /* Warna terang sesuai gambar */
+    color: #000;
+    font-weight: bold;
+}
+
+.count {
+    font-size: 11px;
+    opacity: 0.6;
+    margin-left: 4px;
 }
 
 .footer {
