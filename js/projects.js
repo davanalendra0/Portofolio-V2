@@ -83,16 +83,13 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
 
 document.querySelectorAll(".project-tools").forEach(container => {
     const maxVisible = 5;
-    // Ambil hanya elemen IMG saja
     const items = Array.from(container.querySelectorAll("img"));
 
     if (items.length > maxVisible) {
         const hiddenCount = items.length - maxVisible;
 
-        // Sembunyikan item yang melebihi batas
         items.slice(maxVisible).forEach(el => el.style.display = "none");
 
-        // Cek apakah span .tools-more sudah ada (supaya tidak double saat ganti bahasa)
         let more = container.querySelector(".tools-more");
         if (!more) {
             more = document.createElement("span");
@@ -100,5 +97,35 @@ document.querySelectorAll(".project-tools").forEach(container => {
             container.appendChild(more);
         }
         more.textContent = `+${hiddenCount}`;
+    }
+});
+
+const dropdownBtn = document.getElementById('selected-sort');
+const dropdownMenu = document.getElementById('dropdown-menu');
+const selectedText = dropdownBtn.querySelector('.text');
+const options = dropdownMenu.querySelectorAll('li');
+const arrowIcon = dropdownBtn.querySelector('.arrow-icon'); 
+
+dropdownBtn.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('show');
+    arrowIcon.classList.toggle('rotate'); 
+});
+
+options.forEach(option => {
+    option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        selectedText.innerText = option.getAttribute('data-value');
+        
+        dropdownMenu.classList.remove('show');
+        arrowIcon.classList.remove('rotate');
+        
+        console.log("Sorting by:", option.getAttribute('data-value'));
+    });
+});
+
+window.addEventListener('click', (e) => {
+    if (!dropdownBtn.contains(e.target)) {
+        dropdownMenu.classList.remove('show');
+        arrowIcon.classList.remove('rotate');
     }
 });
