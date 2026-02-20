@@ -683,6 +683,46 @@ body {
     font-size: 22px;
 }
 
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.page-num {
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #333;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.page-num.active {
+    background: white;
+    color: black;
+    font-weight: bold;
+    border-color: white;
+}
+
+.page-num:hover:not(.active) {
+    background: #333;
+}
+
+.prev-next {
+    font-weight: 500;
+    background: #1a1a1a;
+}
+
+.page-num:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
 .sort-container {
     width: 250px; 
     position: sticky;
@@ -692,7 +732,10 @@ body {
 }
 
 .sort-label {
-    font-size: 14px; margin-bottom: 8px; color: #ccc;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #ccc;
 }
 
 .dropdown {
@@ -700,6 +743,7 @@ body {
 }
 
 .dropdown-btn {
+    font-family: "Inter", sans-serif;
     width: 100%;
     background: #111;
     border: 1px solid #333;
@@ -711,6 +755,11 @@ body {
     align-items: center;
     justify-content: space-between;
     transition: 0.3s;
+}
+
+.dropdown-menu {
+    font-family: "Inter", sans-serif;
+    color: white;
 }
 
 .dropdown-btn:hover {
@@ -762,11 +811,12 @@ body {
 }
 
 .tags-section {
-    padding: 20px;
-    max-width: 400px; /* Sesuaikan dengan layout sidebar kamu */
+    padding: 20px 0;
+    max-width: 400px;
 }
 
 .tags-title {
+    font-family: "Space Grotesk", sans-serif;
     font-size: 14px;
     color: #fff;
     margin-bottom: 15px;
@@ -775,8 +825,9 @@ body {
 
 .tags-container {
     display: flex;
-    flex-wrap: wrap; /* Supaya otomatis turun ke bawah jika penuh */
+    flex-wrap: wrap;
     gap: 10px;
+    font-family: "Inter", sans-serif;
 }
 
 .tag-btn {
@@ -795,7 +846,7 @@ body {
 }
 
 .tag-btn.active {
-    background-color: #f3f3f3; /* Warna terang sesuai gambar */
+    background-color: #f3f3f3;
     color: #000;
     font-weight: bold;
 }
