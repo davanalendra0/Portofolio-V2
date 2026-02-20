@@ -67,6 +67,7 @@ document.querySelectorAll(".ripple-btn").forEach(button => {
 
 const hamburger = document.getElementById("hamburgerBtn");
 const mobileMenu = document.getElementById("mobileMenu");
+const navMenu = document.getElementById("navMenu");
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
@@ -250,7 +251,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (totalPages <= 1) return;
 
         const prevBtn = document.createElement('button');
-        prevBtn.innerHTML = `&lt; Prev`;
+        prevBtn.innerHTML = `
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+            <span>Prev</span>`; 
         prevBtn.classList.add('page-num', 'prev-next');
         prevBtn.disabled = currentPage === 1;
         prevBtn.addEventListener('click', () => {
@@ -277,7 +282,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const nextBtn = document.createElement('button');
-        nextBtn.innerHTML = `Next &gt;`; // Simbol >
+        nextBtn.innerHTML = `
+            <span>Next</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>`;
         nextBtn.classList.add('page-num', 'prev-next');
         nextBtn.disabled = currentPage === totalPages;
         nextBtn.addEventListener('click', () => {
@@ -315,4 +324,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     updateUI();
+});
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+});
+
+backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 });
