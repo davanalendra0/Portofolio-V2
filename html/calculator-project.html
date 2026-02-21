@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/project.css">
+    <title>Temperature Calculator - Project</title>
+</head>
+<body>
+
+        <header class="header">
+        <div class="header-left">
+            <a href="../index.html" class="logo">
+                <img src="../asset/img/logo.png" alt="Dava Logo">
+            </a>
+        </div>
+
+        <nav class="nav header-center" id="navMenu">
+            <a href="../index.html#about" data-text="about"><span>about</span></a>
+            <a href="../index.html#skills" data-text="skills"><span>skills</span></a>
+            <a href="projects.html" data-text="projects"><span>projects</span></a>
+            <a href="../index.html#experience" data-text="experience"><span>experience</span></a>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang">
+                <button class="lang-btn" id="langBtn">
+                    🌐<span id="currentLang">EN</span>
+                    <span class="arrow">▾</span>
+                </button>
+
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-item active" data-lang="en">
+                        <span>US</span>
+                        <strong>English</strong>
+                        <span>EN</span>
+                    </div>
+
+                    <div class="lang-item" data-lang="id">
+                        <span>ID</span>
+                        <strong>Indonesia</strong>
+                        <span>ID</span>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="b-side.html" class="b-side-btn ripple-btn">
+                <span class="label">B - SIDE</span>
+                <span class="ripple"></span>
+            </a>
+        </div>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="b-side.html" class="b-sidee">B - SIDE</a>
+    </div>
+
+    <section class="project-detail container">
+        <!-- Back Button -->
+        <a href="projects.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+            Back to Projects
+        </a>
+
+        <!-- Title -->
+        <h1 class="project-title">
+            Temperature Calculator
+        </h1>
+
+        <!-- Description -->
+        <p class="project-description">
+            Convert values between Celsius, Fahrenheit, and Kelvin.
+        </p>
+
+        <!-- Project Image -->
+        <div class="project-image">
+            <img src="../asset/img/project1.jpg" alt="BuildWithAngga Backend">
+        </div>
+        <div class="project-buttons">
+            <a href="https://github.com/davanalendra0/RU-Kalkulator"
+                target="_blank"
+                class="repo-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                View Repository
+            </a>
+            <a href="https://kalkulator-ivory.vercel.app/"
+                target="_blank"
+                class="live-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17L17 7"/>
+                    <path d="M7 7h10v10"/>
+                </svg>
+                Live Website
+            </a>
+        </div>
+    </section>
+
+    <section class="project-content container">
+
+        <!-- LEFT -->
+        <div class="content-left">
+            <h2>Project Overview</h2>
+            <p>
+                Temperature Calculator is a simple web-based temperature conversion tool that allows users to convert values between Celsius, Fahrenheit, and Kelvin.
+            </p>
+            <ul>
+                <li>
+                    <strong>Version Control</strong> : Web-based utility tool
+                </li>
+                <li>
+                    <strong>Target Users</strong> : Students, general users, and anyone who needs quick temperature conversion
+                </li>
+                <li>
+                    <strong>Main Goal</strong> : Provide a fast and easy way to convert temperatures without using complex formulas or external tools
+                </li>
+                <li>
+                    <strong>Solution</strong> : A lightweight calculator that runs directly in the browser and works well on both desktop and mobile devices
+                </li>
+            </ul>
+
+            <h2>Background & Motivation</h2>
+            <p>
+                This project was created to build a <strong>simple and accessible temperature conversion</strong> tool that anyone can use instantly.
+            </p>
+            <p>
+                Many temperature converters online include unnecessary features or complicated interfaces.
+                I wanted to create a cleaner and more straightforward version that focuses only on the essential functionality.
+            </p>
+            <p>
+                This project also helped me practice:
+            </p>
+            <ul>
+                <li>
+                    Building interactive UI components
+                </li>
+                <li>
+                    Handling user input and validation
+                </li>
+                <li>
+                    Implementing mathematical logic in a web application
+                </li>
+            </ul>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>
+                    Convert temperatures between Celsius (°C), Fahrenheit (°F), and Kelvin (K)
+                </li>
+                <li>
+                    Simple and minimal user interface
+                </li>
+                <li>
+                    Instant results without page reload
+                </li>
+                <li>
+                    Supports decimal input values
+                </li>
+                <li>
+                    Responsive design for desktop and mobile devices
+                </li>
+            </ul>
+
+            <h2>How It Works (Technical Implementation)</h2>
+            <p>
+                The system works through a simple conversion process in the browser.
+            </p>
+            <p>
+                When the user enters a temperature value, the application reads the input and identifies the selected temperature scale.
+                After the user clicks the Convert button, the system runs the correct conversion formula based on the selected units.
+            </p>
+            <p>
+                The calculation is processed on the client side, which makes the result appear instantly without refreshing the page.
+                The converted temperature is then displayed in the result section.
+            </p>
+            <p>
+                The application also checks user input to prevent invalid values and ensure accurate calculations.
+            </p>
+
+            <h2>Challenges & What I Learned</h2>
+            <p>
+                One of the main challenges in this project was designing a clean and intuitive interface so users can easily understand how to use the calculator.
+            </p>
+            <p>
+                Another challenge was handling different types of user input, such as:
+            </p>
+            <ul>
+                <li>
+                    Decimal numbers
+                </li>
+                <li>
+                    Empty inputs
+                </li>
+                <li>
+                    Invalid values
+                </li>
+            </ul>
+            <p>
+                To solve this, I implemented input validation and ensured the formulas were applied correctly for each temperature scale.
+            </p>
+            <p>
+                From this project, I learned:
+            </p>
+            <ul>
+                <li>
+                    How to improve user experience in simple tools
+                </li>
+                <li>
+                    Better handling of user input and validation
+                </li>
+                <li>
+                    Structuring small web applications more clearly
+                </li>
+            </ul>
+
+            <h2>Why This Project Matters</h2>
+            <p>
+                This project demonstrates my ability to build a functional and user-friendly web application, even for a simple tool.
+            </p>
+            <p>
+                It shows that I can:
+            </p>
+            <ul>
+                <li>
+                    Implement logical calculations in JavaScript
+                </li>
+                <li>
+                    Create responsive layouts
+                </li>
+                <li>
+                    Focus on usability and simplicity
+                </li>
+            </ul>
+            <p>
+                Even though the project is small, it reflects my attention to detail and problem-solving approach in web development.
+            </p>
+
+            <h2>Future Improvements and Conclusion</h2>
+            <p><strong>Future Improvements</strong></p>
+            <ul>
+                <li>
+                    Add automatic conversion while typing
+                </li>
+                <li>
+                    Improve UI design with better visual feedback
+                </li>
+                <li>
+                    Add more unit conversions (for example: length or weight)
+                </li>
+                <li>
+                    Include a small history of previous conversions
+                </li>
+            </ul>
+            <p><strong>Conclusion</strong></p>
+            <p>
+                This project helped me understand how to build a complete small web application from idea to implementation. It also improved my skills in UI design, input handling, and writing clean logic for calculations.
+            </p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="content-right">
+            <div class="sticky-box">
+
+                <div class="info-block">
+                    <h3>Published Date</h3>
+                    <p>November 30, 2024</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Technologies</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">
+                            <img src="../asset/icons/html.svg" alt="">
+                            HTML
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/css.svg" alt="">
+                            CSS
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/js.svg" alt="">
+                            JavaScript
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/git.svg" alt="">
+                            Git
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/github.svg" alt="">
+                            GitHub
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="brand">
+                <img src="../asset/img/logo.png" alt="" class="ft-logo">
+
+                <div class="socials">
+                    <a href="mailto:davanalendra2@gmail.com" target="_blank">
+                        <img src="../asset/icons/gmail.svg" alt="">
+                    </a>
+                    <a href="https://github.com/davanalendra0" target="_blank">
+                        <img src="../asset/icons/github.svg" alt="">
+                    </a>
+                    <a href="https://discord.com/users/iamvendral" target="_blank">
+                        <img src="../asset/icons/discord.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4>The Website</h4>
+                <ul>
+                    <li><a href="../index.html#">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"/>
+            </svg>
+        </button>
+
+        <div class="copyright">
+            © 2026 Dava Nalendra
+        </div>
+    </footer>
+
+    <script src="../js/project.js"></script>
+</body>
+</html>
