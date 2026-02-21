@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/project.css">
+    <title>Pomodoro Timer - Project</title>
+</head>
+<body>
+
+        <header class="header">
+        <div class="header-left">
+            <a href="../index.html" class="logo">
+                <img src="../asset/img/logo.png" alt="Dava Logo">
+            </a>
+        </div>
+
+        <nav class="nav header-center" id="navMenu">
+            <a href="../index.html#about" data-text="about"><span>about</span></a>
+            <a href="../index.html#skills" data-text="skills"><span>skills</span></a>
+            <a href="projects.html" data-text="projects"><span>projects</span></a>
+            <a href="../index.html#experience" data-text="experience"><span>experience</span></a>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang">
+                <button class="lang-btn" id="langBtn">
+                    🌐<span id="currentLang">EN</span>
+                    <span class="arrow">▾</span>
+                </button>
+
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-item active" data-lang="en">
+                        <span>US</span>
+                        <strong>English</strong>
+                        <span>EN</span>
+                    </div>
+
+                    <div class="lang-item" data-lang="id">
+                        <span>ID</span>
+                        <strong>Indonesia</strong>
+                        <span>ID</span>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="b-side.html" class="b-side-btn ripple-btn">
+                <span class="label">B - SIDE</span>
+                <span class="ripple"></span>
+            </a>
+        </div>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="b-side.html" class="b-sidee">B - SIDE</a>
+    </div>
+
+    <section class="project-detail container">
+        <!-- Back Button -->
+        <a href="projects.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+            Back to Projects
+        </a>
+
+        <!-- Title -->
+        <h1 class="project-title">
+            Pomodoro Timer
+        </h1>
+
+        <!-- Description -->
+        <p class="project-description">
+            Helps users using the time-management method Pomodoro Technique.
+        </p>
+
+        <!-- Project Image -->
+        <div class="project-image">
+            <img src="../asset/img/project2.jpg" alt="">
+        </div>
+        <div class="project-buttons">
+            <a href="https://github.com/davanalendra0/Web-Pomodoro"
+                target="_blank"
+                class="repo-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                View Repository
+            </a>
+            <a href="https://pomodoro-nine-fawn.vercel.app/"
+                target="_blank"
+                class="live-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17L17 7"/>
+                    <path d="M7 7h10v10"/>
+                </svg>
+                Live Website
+            </a>
+        </div>
+    </section>
+
+    <section class="project-content container">
+
+        <!-- LEFT -->
+        <div class="content-left">
+            <h2>Project Overview</h2>
+            <p>
+                Pomodoro Timer is a simple browser-based productivity web app that helps users manage focus sessions and breaks using the Pomodoro Technique.
+            </p>
+            <ul>
+                <li>
+                    <strong>Project Type</strong> : Productivity web app
+                </li>
+                <li>
+                    <strong>Target Users</strong> : Students, developers, and people who want to improve focus while working or studying
+                </li>
+                <li>
+                    <strong>Main Goal</strong> : Help users manage their time using structured focus and break sessions
+                </li>
+                <li>
+                    <strong>Solution</strong> : A lightweight timer application that runs directly in the browser without installation and works on both desktop and mobile devices
+                </li>
+            </ul>
+
+            <h2>Background & Motivation</h2>
+            <p>
+                This project was created to provide a simple and distraction-free Pomodoro timer that users can access quickly from their browser.
+            </p>
+            <p>
+                Many productivity apps require installation, accounts, or include too many features.
+                I wanted to build a cleaner and more minimal tool that focuses only on the Pomodoro workflow.
+            </p>
+            <p>
+                Through this project, I also wanted to practice:
+            </p>
+            <ul>
+                <li>
+                    Building interactive UI behavior
+                </li>
+                <li>
+                    Managing timer logic in a web application
+                </li>
+                <li>
+                    Improving user experience with a minimal interface
+                </li>
+            </ul>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>
+                    Simple timer modes : Focus, Short Break, and Long Break
+                </li>
+                <li>
+                    Default focus session (25 minutes) following the Pomodoro Technique
+                </li>
+                <li>
+                    Start, Pause, and Reset controls
+                </li>
+                <li>
+                    Smooth switching between work sessions and breaks
+                </li>
+                <li>
+                    Minimal and distraction-free interface
+                </li>
+                <li>
+                    Fully browser-based and responsive for desktop and mobile
+                </li>
+            </ul>
+
+            <h2>How It Works (Technical Implementation)</h2>
+            <p>
+                When the user opens the Pomodoro Timer web app, the system displays a default focus timer set to 25 minutes.
+            </p>
+            <p>
+                Once the user clicks the Start button, the timer begins counting down in real time.
+                The application manages the timer using client-side logic, which updates the UI every second.
+            </p>
+            <p>
+                Users can pause the timer or reset it at any time.
+                When a session ends, the user can switch to Short Break or Long Break mode to continue the Pomodoro cycle.
+            </p>
+            <p>
+                All processes run directly in the browser, so the application works instantly without requiring a backend or external services.
+            </p>
+
+            <h2>Challenges & What I Learned</h2>
+            <p>
+                One challenge in this project was creating a clear and minimal interface while still making the timer easy to understand and use.
+            </p>
+            <p>
+                Another challenge was implementing reliable timer behavior, such as :
+            </p>
+            <ul>
+                <li>
+                    Handling start, pause, and reset actions correctly
+                </li>
+                <li>
+                    Making sure the timer updates smoothly
+                </li>
+                <li>
+                    Managing mode switching between focus and break sessions
+                </li>
+            </ul>
+            <p>
+                From this project, I learned:
+            </p>
+            <ul>
+                <li>
+                    How timer logic works in web applications
+                </li>
+                <li>
+                    Better control of UI updates and state changes
+                </li>
+                <li>
+                    Designing simple productivity tools with a good user experience
+                </li>
+            </ul>
+
+            <h2>Why This Project Matters</h2>
+            <p>
+                This project shows my ability to build an interactive web application with real-time functionality.
+            </p>
+            <p>
+                It demonstrates :
+            </p>
+            <ul>
+                <li>
+                    Frontend logic implementation
+                </li>
+                <li>
+                    UI/UX design for productivity tools
+                </li>
+                <li>
+                    Clean and minimal application structure
+                </li>
+            </ul>
+            <p>
+                Even though the app is simple, it reflects my focus on usability and performance.
+            </p>
+
+            <h2>Future Improvements and Conclusion</h2>
+            <p><strong>Future Improvements</strong></p>
+            <ul>
+                <li>
+                    Add sound or notification when the timer ends
+                </li>
+                <li>
+                    Automatic switching between sessions
+                </li>
+                <li>
+                    Custom timer duration settings
+                </li>
+                <li>
+                    Session statistics or focus tracking
+                </li>
+            </ul>
+            <p><strong>Conclusion</strong></p>
+            <p>
+                This project helped me understand how to build a real-time interactive feature in a web app.
+                It also improved my skills in managing application logic and creating a simple but useful productivity tool.
+            </p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="content-right">
+            <div class="sticky-box">
+
+                <div class="info-block">
+                    <h3>Published Date</h3>
+                    <p>November 11, 2025</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Technologies</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">
+                            <img src="../asset/icons/html.svg" alt="">
+                            HTML
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/css.svg" alt="">
+                            CSS
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/js.svg" alt="">
+                            JavaScript
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/git.svg" alt="">
+                            Git
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/github.svg" alt="">
+                            GitHub
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="brand">
+                <img src="../asset/img/logo.png" alt="" class="ft-logo">
+
+                <div class="socials">
+                    <a href="mailto:davanalendra2@gmail.com" target="_blank">
+                        <img src="../asset/icons/gmail.svg" alt="">
+                    </a>
+                    <a href="https://github.com/davanalendra0" target="_blank">
+                        <img src="../asset/icons/github.svg" alt="">
+                    </a>
+                    <a href="https://discord.com/users/iamvendral" target="_blank">
+                        <img src="../asset/icons/discord.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4>The Website</h4>
+                <ul>
+                    <li><a href="../index.html#">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"/>
+            </svg>
+        </button>
+
+        <div class="copyright">
+            © 2026 Dava Nalendra
+        </div>
+    </footer>
+
+    <script src="../js/project.js"></script>
+</body>
+</html>
