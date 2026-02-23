@@ -504,6 +504,47 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 42px;
+    }
+    
+    .hero-content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px;
+        margin-bottom: 12px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .icon-box {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+}
+
 .projects-section {
     padding: 120px 50px;
     overflow: visible;
@@ -878,6 +919,154 @@ body {
     font-size: 11px;
     opacity: 0.6;
     margin-left: 4px;
+}
+
+@media (max-width: 1024px) {
+    .projects-wrapper {
+        flex-direction: column; 
+        gap: 40px;
+    }
+
+    .sort-container {
+        width: 100%; 
+        position: static; 
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        order: 1;
+    }
+
+    .tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .tag-btn {
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    .projects-container {
+        padding-top: 20px;
+        order: 2;
+    }
+
+    .project-card {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+        padding: 50px 0;
+    }
+
+    .project-card:nth-child(even) .project-info {
+        order: 1; 
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .project-card:nth-child(even) .project-preview {
+        order: 2;
+    }
+
+    .project-desc {
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 60px 20px;
+    }
+
+    .project-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 40px 20px !important;
+        gap: 20px !important;
+        text-align: center !important;
+        background: transparent !important;
+        border: none !important;
+        position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; 
+        margin-bottom: 20px;
+    }
+
+    .project-card:last-child {
+        border-bottom: none !important;
+    }
+
+    .project-card::before {
+        content: "PROJECT " counter(project-counter);
+        counter-increment: project-counter;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 10px;
+        letter-spacing: 2px;
+        color: var(--neon, #00ffcc);
+        margin-bottom: -10px;
+        order: 0;
+    }
+
+    .project-info {
+        order: 1 !important;
+    }
+
+    .project-name {
+        font-size: 26px !important;
+        margin-top: 5px !important;
+    }
+
+    .project-preview {
+        order: 2 !important;
+        width: 100% !important;
+        border-radius: 12px;
+        border: 1px solid rgba(161, 161, 170, 0.3) !important;
+    }
+
+    .project-actions {
+        order: 3 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin: 15px 0 25px 0 !important;
+    }
+
+    .project-desc, .project-tools {
+        display: none !important;
+    }
+
+    .project-btn {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        min-width: 140px;
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+        margin: 0 !important;
+    }
+
+    .projects-list {
+        counter-reset: project-counter;
+    }
+
+    .project-name {
+        font-size: 32px;
+    }
+
+    .tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
 }
 
 .footer {
