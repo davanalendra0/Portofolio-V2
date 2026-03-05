@@ -186,6 +186,10 @@ body {
     color: white;
     cursor: pointer;
     transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
 }
 
 .lang-item:hover {
@@ -537,7 +541,7 @@ body {
     gap: 40px;
 }
 
-.footer h4 {
+.footer h2 {
     color: white;
     margin-bottom: 12px;
     font-size: 16px;
