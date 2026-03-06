@@ -1500,7 +1500,7 @@ body {
     cursor: default;
 }
 
-.cert-detail-desc h4 {
+.cert-detail-desc h3 {
     margin-bottom: 8px;
     color: white;
     font-family: monospace;

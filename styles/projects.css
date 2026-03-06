@@ -468,6 +468,7 @@ body {
     z-index: 2;
     max-width: 700px;
     cursor: default;
+    transform: translateY(80px);
 }
 
 .icon-box {
@@ -513,6 +514,10 @@ body {
         max-width: 600px;
         margin: 0 auto;
     }
+
+    .hero-content {
+        transform: translateY(60px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -524,6 +529,10 @@ body {
     .hero-content p {
         font-size: 14px;
         padding: 0 20px;
+    }
+
+    .hero-content {
+        transform: translateY(40px);
     }
 }
 
@@ -542,6 +551,10 @@ body {
         width: 40px;
         height: 40px;
         margin-bottom: 15px;
+    }
+
+    .hero-content {
+        transform: translateY(30px);
     }
 }
 

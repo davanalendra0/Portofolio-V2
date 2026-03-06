@@ -3,22 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dava Nalendra - Portofolio</title>
-    <link rel="stylesheet" href="../styles/b-side.css">
+    <link rel="icon" type="image/jpg" href="../asset/img/logo.png">
+    <link rel="stylesheet" href="../styles/project.css">
+    <title>Portofolio V2 - Project</title>
 </head>
 <body>
 
-    <div class="wrapper">
-        <div class="icon-container">
-            <img src="../asset/icons/unplug.png" alt="">
+        <header class="header">
+        <div class="header-left">
+            <a href="../index.html" class="logo">
+                <img src="../asset/img/logo.png" alt="Dava Logo">
+            </a>
         </div>
 
-        <h2>Mohon maaf</h2>
-        <p>Halaman belum tersedia, masih dalam tahap pengerjaan.</p>
+        <nav class="nav header-center" id="navMenu">
+            <a href="../index.html#about" data-text="about"><span>about</span></a>
+            <a href="../index.html#skills" data-text="skills"><span>skills</span></a>
+            <a href="projects.html" data-text="projects"><span>projects</span></a>
+            <a href="../index.html#experience" data-text="experience"><span>experience</span></a>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang">
+                <button class="lang-btn" id="langBtn">
+                    🌐<span id="currentLang">EN</span>
+                    <span class="arrow">▾</span>
+                </button>
+
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-item active" data-lang="en">
+                        <span>US</span>
+                        <strong>English</strong>
+                        <span>EN</span>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="b-side.html" class="b-side-btn ripple-btn">
+                <span class="label">B - SIDE</span>
+                <span class="ripple"></span>
+            </a>
+        </div>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="b-side.html" class="b-sidee">B - SIDE</a>
     </div>
 
-    <!-- 23 Februari 2026 -->
+    <section class="project-detail container">
+        <!-- Back Button -->
+        <a href="projects.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+            Back to Projects
+        </a>
 
-    <script src="../js/script.js"></script>
+        <!-- Title -->
+        <h1 class="project-title">
+            Portofolio V2
+        </h1>
+
+        <!-- Description -->
+        <p class="project-description">
+            A professionally upgraded personal portfolio.
+        </p>
+
+        <!-- Project Image -->
+        <div class="project-image">
+            <img src="../asset/img/project8.jpg" alt="">
+        </div>
+        <div class="project-buttons">
+            <a href="https://github.com/davanalendra0/Portofolio-V2"
+                target="_blank"
+                class="repo-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                View Repository
+            </a>
+            <a href="https://dava-nalendra-portofolio.vercel.app/""
+                target="_blank"
+                class="live-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17L17 7"/>
+                    <path d="M7 7h10v10"/>
+                </svg>
+                Live Website
+            </a>
+        </div>
+    </section>
+
+    <section class="project-content container">
+
+        <!-- LEFT -->
+        <div class="content-left">
+            <h2>Project Overview</h2>
+            <p>
+                Personal Portfolio Website V2 is a modern and responsive personal portfolio website built to present my identity as a Front End Developer.
+                The website acts as a central place where visitors can learn about my skills, projects, experience, and certifications.
+            </p>
+            <ul>
+                <li>
+                    <strong>Project Type</strong> : Personal Portfolio
+                </li>
+                <li>
+                    <strong>Target Users</strong> : Recruiters, potential clients, and other developers
+                </li>
+                <li>
+                    <strong>Main Goal</strong> : Showcase my work, technical skills, and professional journey in a clear and engaging way
+                </li>
+                <li>
+                    <strong>Solution</strong> : A digital portfolio that combines a professional layout, project showcase, and easy navigation to help visitors quickly understand my capabilities
+                </li>
+            </ul>
+
+            <h2>Background & Motivation</h2>
+            <p>
+                The main idea behind this project was to build a digital resume that feels more interactive and engaging than a traditional CV.
+            </p>
+            <p>
+                Instead of only listing information, I wanted the website itself to demonstrate my skills in frontend development through clean design, responsive layout, and organized content.
+            </p>
+            <p>
+                This project also reflects my journey in learning web development and highlights the projects I have completed along the way.
+            </p>
+            <p>
+                Through this project, I wanted to improve :
+            </p>
+            <ul>
+                <li>
+                    UI and layout design.
+                </li>
+                <li>
+                    Project presentation.
+                </li>
+                <li>
+                    Building a professional personal brand online.
+                </li>
+            </ul>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>
+                    Fully responsive design that works well on mobile, tablet, and desktop
+                </li>
+                <li>
+                    Landing section that introduces me and shows my current status (Open to Work)
+                </li>
+                <li>
+                    Project gallery with filtering system based on tags such as web app, landing page, or responsive
+                </li>
+                <li>
+                    Interactive experience timeline showing my internship and personal projects
+                </li>
+                <li>
+                    Skills and tech stack section displaying the technologies I use
+                </li>
+                <li>
+                    Contact section with quick links to Email, GitHub, LinkedIn, and Discord
+                </li>
+                <li>
+                    Structured project detail pages to explain each project more clearly
+                </li>
+            </ul>
+
+            <h2>How It Works (Technical Implementation)</h2>
+            <p>
+                When users visit the website, they first see the landing section, which introduces who I am and what I do as a developer.
+            </p>
+            <p>
+                From the navigation menu, users can easily move to different sections such as Skills, Experience, Projects, and Contact.
+            </p>
+            <p>
+                In the Projects section, users can explore my work and filter projects based on categories or tags.
+                This helps visitors quickly find specific types of projects.
+            </p>
+            <p>
+                If they want to learn more about a project, they can open the Project Details page, which provides a deeper explanation of the project including its features and implementation.
+            </p>
+            <p>
+                The Contact section makes it easy for visitors to reach out through various platforms if they are interested in collaboration or opportunities.
+            </p>
+
+            <h2>Challenges & What I Learned</h2>
+            <p>
+                One of the biggest challenges in this project was creating a website that feels both professional and personal at the same time.
+            </p>
+            <p>
+                Another challenge was building the project filtering system, making sure it works smoothly and helps users explore projects easily.
+            </p>
+            <p>
+                I also focused on making every section responsive, especially :
+            </p>
+            <ul>
+                <li>
+                    Project grids
+                </li>
+                <li>
+                    Timeline layout
+                </li>
+                <li>
+                    Certification and skill cards
+                </li>
+            </ul>
+            <p>
+                From this project, I learned:
+            </p>
+            <ul>
+                <li>
+                    How to structure a professional portfolio website
+                </li>
+                <li>
+                    Better responsive design techniques
+                </li>
+                <li>
+                    Improving UI consistency across sections
+                </li>
+                <li>
+                    Presenting projects in a clearer and more organized way
+                </li>
+            </ul>
+
+            <h2>Why This Project Matters</h2>
+            <p>
+                This project is very important because it represents my main professional website as a developer.
+            </p>
+            <p>
+                It demonstrates :
+            </p>
+            <ul>
+                <li>
+                    My frontend development skills
+                </li>
+                <li>
+                    My design and layout abilities
+                </li>
+                <li>
+                    My real projects and experience
+                </li>
+                <li>
+                    My ability to build a complete portfolio platform
+                </li>
+            </ul>
+            <p>
+                It also acts as a central place where recruiters or clients can evaluate my work.
+            </p>
+
+            <h2>Future Improvements and Conclusion</h2>
+            <p><strong>Future Improvements</strong></p>
+            <ul>
+                <li>
+                    Add animations and micro-interactions
+                </li>
+                <li>
+                    Improve project filtering with more advanced sorting
+                </li>
+                <li>
+                    Improve performance optimization
+                </li>
+                <li>
+                    Add dark mode option
+                </li>
+            </ul>
+            <p><strong>Conclusion</strong></p>
+            <p>
+                This project represents my progress as a Front End Developer and serves as a platform to showcase my work and skills.
+                Building this portfolio helped me improve my design thinking, project structure, and overall frontend development skills.
+            </p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="content-right">
+            <div class="sticky-box">
+
+                <div class="info-block">
+                    <h3>Published Date</h3>
+                    <p>February 23, 2026</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Technologies</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">
+                            <img src="../asset/icons/html.svg" alt="">
+                            HTML
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/css.svg" alt="">
+                            CSS
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/js.svg" alt="">
+                            JavaScript
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/git.svg" alt="">
+                            Git
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/github.svg" alt="">
+                            GitHub
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="brand">
+                <img src="../asset/img/logo.png" alt="" class="ft-logo">
+
+                <div class="socials">
+                    <a href="mailto:davanalendra2@gmail.com" target="_blank">
+                        <img src="../asset/icons/gmail.svg" alt="">
+                    </a>
+                    <a href="https://github.com/davanalendra0" target="_blank">
+                        <img src="../asset/icons/github.svg" alt="">
+                    </a>
+                    <a href="https://discord.com/users/iamvendral" target="_blank">
+                        <img src="../asset/icons/discord.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4>The Website</h4>
+                <ul>
+                    <li><a href="../index.html#">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"/>
+            </svg>
+        </button>
+
+        <div class="copyright">
+            © 2026 Dava Nalendra
+        </div>
+    </footer>
+
+    <script src="../js/project.js"></script>
 </body>
 </html>
