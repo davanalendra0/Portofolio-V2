@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="../asset/img/logo.png">
+    <link rel="stylesheet" href="../styles/project.css">
+    <title>Mocking - Project</title>
+</head>
+<body>
+
+        <header class="header">
+        <div class="header-left">
+            <a href="../index.html" class="logo">
+                <img src="../asset/img/logo.png" alt="Dava Logo">
+            </a>
+        </div>
+
+        <nav class="nav header-center" id="navMenu">
+            <a href="../index.html#about" data-text="about"><span>about</span></a>
+            <a href="../index.html#skills" data-text="skills"><span>skills</span></a>
+            <a href="projects.html" data-text="projects"><span>projects</span></a>
+            <a href="../index.html#experience" data-text="experience"><span>experience</span></a>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang">
+                <button class="lang-btn" id="langBtn">
+                    🌐<span id="currentLang">EN</span>
+                    <span class="arrow">▾</span>
+                </button>
+
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-item active" data-lang="en">
+                        <span>US</span>
+                        <strong>English</strong>
+                        <span>EN</span>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="b-side.html" class="b-side-btn ripple-btn">
+                <span class="label">B - SIDE</span>
+                <span class="ripple"></span>
+            </a>
+        </div>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="b-side.html" class="b-sidee">B - SIDE</a>
+    </div>
+
+    <section class="project-detail container">
+        <!-- Back Button -->
+        <a href="projects.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+            Back to Projects
+        </a>
+
+        <!-- Title -->
+        <h1 class="project-title">
+            Mocking
+        </h1>
+
+        <!-- Description -->
+        <p class="project-description">
+            Web platform designed to represent a professional record label and recording studio.
+        </p>
+
+        <!-- Project Image -->
+        <div class="project-image">
+            <img src="../asset/img/project11.png" alt="">
+        </div>
+        <div class="project-buttons">
+            <a href="https://github.com/davanalendra0/Web-Music1"
+                target="_blank"
+                class="repo-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                View Repository
+            </a>
+            <a href="https://label-music-dn.vercel.app/"
+                target="_blank"
+                class="live-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17L17 7"/>
+                    <path d="M7 7h10v10"/>
+                </svg>
+                Live Website
+            </a>
+        </div>
+    </section>
+
+    <section class="project-content container">
+
+        <!-- LEFT -->
+        <div class="content-left">
+            <h2>Project Overview</h2>
+            <p>
+                Mocking Music Label is a responsive web platform designed to represent a professional record label and recording studio.
+                The website introduces the label’s identity, showcases its artists, and provides booking options for both artists and studio sessions.
+            </p>
+            <ul>
+                <li>
+                    <strong>Project Type</strong> : Music label / studio management website
+                </li>
+                <li>
+                    <strong>Target Users</strong> : Artists, event organizers, and clients who want to book artists or studio sessions
+                </li>
+                <li>
+                    <strong>Main Goal</strong> : Provide a professional online platform where clients can learn about the label and easily request bookings
+                </li>
+                <li>
+                    <strong>Solution</strong> : A responsive website that combines artist profiles, booking forms, and studio information in a structured and accessible interface
+                </li>
+            </ul>
+
+            <h2>Background & Motivation</h2>
+            <p>
+                This project was created to simulate a professional website for a music label and recording studio.
+            </p>
+            <p>
+                Music labels and studios often need a platform where artists can be introduced and clients can easily request bookings.
+                With this project, I wanted to design a website that combines branding, artist showcase, and booking functionality in one place.
+            <p>
+                The project also helped me practice::
+            </p>
+            <ul>
+                <li>
+                    Designing websites for creative industries
+                </li>
+                <li>
+                    Building structured booking forms
+                </li>
+                <li>
+                    Creating a professional dark-themed interface
+                </li>
+            </ul>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>
+                    Hero section introducing the music label and its identity
+                </li>
+                <li>
+                    Artist section displaying talents under the label
+                </li>
+                <li>
+                    Artist booking form for event or collaboration requests
+                </li>
+                <li>
+                    Recording studio reservation system with clear pricing packages
+                </li>
+                <li>
+                    Multiple studio booking options such as Half Day, Full Day, and Weekly packages
+                </li>
+                <li>
+                    Dark-themed interface designed to match the music industry aesthetic
+                </li>
+                <li>
+                    Responsive navigation menu for smooth browsing between sections
+                </li>
+            </ul>
+
+            <h2>How It Works (Technical Implementation)</h2>
+            <p>
+                When users visit the website, they are greeted with a hero section that introduces the record label and its brand identity.
+            </p>
+            <p>
+                Visitors can then navigate to the Artist section, where they can explore the artists associated with the label.
+            </p>
+            <p>
+                If a client wants to book an artist, they can fill out a booking form.
+            </p>
+            <p>
+                The website also provides a Studio section, where users can view available recording studio packages.
+                Clients can choose different booking durations depending on their production needs.
+            </p>
+            <p>
+                All sections are accessible through a responsive navigation menu that allows users to move smoothly across the website.
+            </p>
+
+            <h2>Challenges & What I Learned</h2>
+            <p>
+                One of the challenges in this project was designing a website that feels professional and suitable for the music industry.
+            </p>
+            <p>
+                Another challenge was building booking forms that remain easy to use while collecting important information from users.
+            </p>
+            <p>
+                From this project, I learned:
+            </p>
+            <ul>
+                <li>
+                    How to design websites for creative businesses
+                </li>
+                <li>
+                    Building structured form interfaces
+                </li>
+                <li>
+                    Improving UI consistency with themed designs
+                </li>
+                <li>
+                    Creating better navigation structures for multi-section pages
+                </li>
+            </ul>
+
+            <h2>Why This Project Matters</h2>
+            <p>
+                This project demonstrates my ability to build a business-oriented website with functional UI components.
+            </p>
+            <p>
+                It highlights:
+            </p>
+            <ul>
+                <li>
+                    Frontend layout design
+                </li>
+                <li>
+                    Form-based interaction
+                </li>
+                <li>
+                    UI design for industry-specific branding
+                </li>
+                <li>
+                    Responsive web development
+                </li>
+            </ul>
+            <p>
+                The project also shows how websites can support real-world business processes such as artist booking and studio reservations.
+            </p>
+
+            <h2>Future Improvements and Conclusion</h2>
+            <p><strong>Future Improvements</strong></p>
+            <ul>
+                <li>
+                    Add backend integration for real booking management
+                </li>
+                <li>
+                    Implement database storage for booking requests
+                </li>
+                <li>
+                    Add artist profile pages with more detailed information
+                </li>
+                <li>
+                    Improve animations and UI interactions
+                </li>
+                <li>
+                    Add a calendar-based studio scheduling system
+                </li>
+            </ul>
+            <p><strong>Conclusion</strong></p>
+            <p>
+                This project helped me practice building a professional website with interactive features such as booking forms and service information.
+                It improved my skills in layout design, responsive development, and creating user-friendly interfaces for business-oriented platforms.
+            </p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="content-right">
+            <div class="sticky-box">
+
+                <div class="info-block">
+                    <h3>Published Date</h3>
+                    <p>March 8, 2025</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Technologies</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">
+                            <img src="../asset/icons/html.svg" alt="">
+                            HTML
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/css.svg" alt="">
+                            CSS
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/js.svg" alt="">
+                            JavaScript
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/git.svg" alt="">
+                            Git
+                        </span>
+                        <span class="tech-item">
+                            <img src="../asset/icons/github.svg" alt="">
+                            GitHub
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="brand">
+                <img src="../asset/img/logo.png" alt="" class="ft-logo">
+
+                <div class="socials">
+                    <a href="mailto:davanalendra2@gmail.com" target="_blank">
+                        <img src="../asset/icons/gmail.svg" alt="">
+                    </a>
+                    <a href="https://github.com/davanalendra0" target="_blank">
+                        <img src="../asset/icons/github.svg" alt="">
+                    </a>
+                    <a href="https://discord.com/users/iamvendral" target="_blank">
+                        <img src="../asset/icons/discord.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4>The Website</h4>
+                <ul>
+                    <li><a href="../index.html#">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m18 15-6-6-6 6"/>
+            </svg>
+        </button>
+
+        <div class="copyright">
+            © 2026 Dava Nalendra
+        </div>
+    </footer>
+
+    <script src="../js/project.js"></script>
+</body>
+</html>
