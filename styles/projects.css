@@ -888,7 +888,7 @@ body {
 
 .tags-section {
     padding: 20px 0;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .tags-title {
@@ -911,7 +911,7 @@ body {
     background: transparent;
     color: #ccc;
     border: 1px solid transparent;
-    padding: 6px 12px;
+    padding: 5px 10px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 13px;
