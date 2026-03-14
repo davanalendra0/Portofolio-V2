@@ -112,96 +112,11 @@ dropdownBtn.addEventListener('click', () => {
     arrowIcon.classList.toggle('rotate'); 
 });
 
-options.forEach(option => {
-    option.addEventListener('click', (e) => {
-        e.stopPropagation();
-        selectedText.innerText = option.getAttribute('data-value');
-        
-        dropdownMenu.classList.remove('show');
-        arrowIcon.classList.remove('rotate');
-        
-        console.log("Sorting by:", option.getAttribute('data-value'));
-    });
-});
-
 window.addEventListener('click', (e) => {
     if (!dropdownBtn.contains(e.target)) {
         dropdownMenu.classList.remove('show');
         arrowIcon.classList.remove('rotate');
     }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.projects-list');
-    const cards = Array.from(document.querySelectorAll('.project-card'));
-    const tagButtons = document.querySelectorAll('.tag-btn');
-    const dropdownItems = document.querySelectorAll('.dropdown-menu li');
-    const selectedSortText = document.querySelector('#selected-sort .text');
-
-    function updateTagCounts() {
-        tagButtons.forEach(btn => {
-            const tag = btn.getAttribute('data-tag');
-            const countSpan = btn.querySelector('.count');
-            if (!countSpan) return;
-
-            if (tag === 'all') {
-                countSpan.textContent = `(${cards.length})`;
-            } else {
-                const count = cards.filter(card => 
-                    card.getAttribute('data-category').split(' ').includes(tag)
-                ).length;
-                countSpan.textContent = `(${count})`;
-            }
-        });
-    }
-
-    function filterAndSort() {
-        const activeTag = document.querySelector('.tag-btn.active').getAttribute('data-tag');
-        const sortValue = selectedSortText.textContent.trim();
-
-        cards.forEach(card => {
-            const categories = card.getAttribute('data-category').split(' ');
-            const isMatch = activeTag === 'all' || categories.includes(activeTag);
-            
-            if (isMatch) {
-                card.style.display = 'grid'; // Gunakan grid/flex sesuai CSS asli Anda
-                card.classList.remove('hidden');
-            } else {
-                card.style.display = 'none';
-                card.classList.add('hidden');
-            }
-        });
-
-        const visibleCards = cards.filter(card => !card.classList.contains('hidden'));
-        
-        if (sortValue === "Oldest First") {
-            // Urutan asli HTML (1 ke 8)
-            visibleCards.sort((a, b) => cards.indexOf(a) - cards.indexOf(b));
-        } else {
-            // Urutan terbalik (8 ke 1)
-            visibleCards.sort((a, b) => cards.indexOf(b) - cards.indexOf(a));
-        }
-
-        visibleCards.forEach(card => container.appendChild(card));
-    }
-
-    tagButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            tagButtons.forEach(t => t.classList.remove('active'));
-            btn.classList.add('active');
-            filterAndSort();
-        });
-    });
-
-    dropdownItems.forEach(item => {
-        item.addEventListener('click', () => {
-            selectedSortText.textContent = item.textContent;
-            filterAndSort();
-        });
-    });
-
-    updateTagCounts();
-    filterAndSort();
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -224,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return activeTag === 'all' || categories.includes(activeTag);
         });
 
-        if (sortValue === "Oldest First") {
+        if (sortValue === "Oldest") {
             filteredCards.sort((a, b) => cards.indexOf(a) - cards.indexOf(b));
         } else {
             filteredCards.sort((a, b) => cards.indexOf(b) - cards.indexOf(a));
@@ -307,6 +222,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function updateTagCounts() {
+        tagButtons.forEach(btn => {
+            const tag = btn.getAttribute('data-tag');
+            const countSpan = btn.querySelector('.count');
+            if (!countSpan) return;
+            if (tag === 'all') {
+                countSpan.textContent = `(${cards.length})`;
+            } else {
+                const count = cards.filter(card =>
+                    card.getAttribute('data-category').split(' ').includes(tag)
+                ).length;
+                countSpan.textContent = `(${count})`;
+            }
+        });
+    }
+
     tagButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             tagButtons.forEach(t => t.classList.remove('active'));
@@ -323,6 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    updateTagCounts();
     updateUI();
 });
 
